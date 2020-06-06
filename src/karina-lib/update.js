@@ -46,7 +46,7 @@ const Setup = async (step) => {
 
       return setupInstructions;
    } else if (step == '2') {
-
+      // Do nothing.
    } else {
       return process.exit();
    }

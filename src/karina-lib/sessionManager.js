@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     atsume.logger(`INFO`, `[Session Manager]: DOMContent Loaded! Starting other function services...`);
 
     // Run the setup (includes the prerequisites checks.)
-    await services.Setup();
+    await services.Setup(1);
 
     serverQuery();
     toolbarListeners();
