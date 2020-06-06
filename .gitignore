@@ -3,3 +3,5 @@ cache
 node_modules
 .vscode
 .history
+package-lock.json
+logs.txt
