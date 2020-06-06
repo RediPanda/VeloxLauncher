@@ -1,1 +1,1 @@
-console.log(`${process.env.APPDATA}/devpanda`)
+console.log(`${process.mainModule.path}`)

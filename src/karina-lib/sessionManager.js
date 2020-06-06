@@ -39,7 +39,7 @@ async function serviceAuthentication() {
         if (fs.existsSync('src/profile')) {
             atsume.logger(`INFO`, "[Session Manager @ fs]: Profiler is present during load. Loading information to the module.")
 
-            let authDataRaw = await fs.readFileSync('src/profile/auth.json', 'utf8')
+            let authDataRaw = await fs.readFileSync(`${process.env.APPDATA}/devpanda/client/profile/auth.json`, 'utf8')
             let authData = JSON.parse(authDataRaw)
 
             if (authData.email === undefined) {
@@ -107,7 +107,7 @@ async function serviceAuthentication() {
     } else if (obj.accessToken) {
         atsume.logger(`API`, `[Session Manager @ Authentication]: Successfully authenticated user @${inputEmail}`)
         // text.innerHTML = 'Successfully validated your session!';
-        fs.writeFile('cache/session-lock.json', JSON.stringify({
+        fs.writeFile('${process.env.APPDATA}/devpanda/cache/session-lock.json', JSON.stringify({
             token: finalToken,
             date: Date.now(),
             boolean: 1
@@ -123,12 +123,13 @@ async function serviceAuthentication() {
 // On page load/app load, open event listeners. (Button Functions)
 async function buttonListeners() {
     atsume.logger(`INFO`, `[Session Manager]: Listening for Play Triggers.`);
-
+    /** Removing button listener because Seiki was here.
     document.getElementById("playBtn1").addEventListener("click", () => {
         alert('Launching the game. Please wait!')
         runtime.runApplication('ipconfig');
         getUpdate()
     });
+    */
 
     document.getElementById("playBtn2").addEventListener("click", () => {
         alert('Launching the game. Please wait!')
@@ -148,7 +149,7 @@ async function buttonListeners() {
         atsume.logger(`DATABASE`, `[Session Manager @ getUpdate]: Callback received.`);
         alert("Update getting. Please wait as we are checking the current version number.");
 
-        let versionBuffer = fs.readFileSync('src/instance/redis.json')
+        let versionBuffer = fs.readFileSync(`${process.env.APPDATA}/devpanda/client/profile/redis.json`)
         let latestVersion = fetch()
         if (versionBuffer) {}
     };
@@ -156,12 +157,12 @@ async function buttonListeners() {
     // Once the DOM Content load, we shall check for any latest updates.
     try {
         // Read off existing profile settings.
-        if (fs.existsSync('src/profile')) {
+        if (fs.existsSync(`${process.env.APPDATA}/devpanda/client/profile`)) {
             atsume.logger(`INFO`, `[Session Manager @ apt-module]: Profile directory detected.`);
         }
     } catch(err) {
         // Compile new profile settings based on SessionManager version.
-        fs.writeFile('src/profile/launcher-settings.json', JSON.stringify({
+        fs.writeFile(`${process.env.APPDATA}/devpanda/client/profile/launcher-settings.json`, JSON.stringify({
             version: localfileVersion
         }), function (err, results) {
             // console.log(err + '  ' + results)
@@ -246,7 +247,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     serverQuery();
     toolbarListeners();
-    serviceAuthentication();
+    // serviceAuthentication(); Disabled because Seiki is currently working on it.
     buttonListeners();
 
 });
