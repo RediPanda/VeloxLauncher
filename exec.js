@@ -12,6 +12,8 @@ function createWindow() {
     width: 1300,
     height: 700,
     frame: false,
+    resizable: false,
+    mpveable: true,
     ELECTRON_DISABLE_SECURITY_WARNINGS: false,
     webPreferences: {
       nodeIntegration: true
@@ -54,14 +56,6 @@ app.on('activate', () => {
 function getData() {
   console.log('Yay!')
   alert('An error has occured!')
-}
-
-function connectSession() {
-
-}
-
-function launchGame() {
-
 }
 
 function databaseQuery(args, query) {
