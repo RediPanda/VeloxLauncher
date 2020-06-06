@@ -44,7 +44,6 @@ const Setup = async (step) => {
          fs.mkdirSync(`${process.env.APPDATA}/devpanda/cache`)
       }
 
-      return setupInstructions;
    } else if (step == '2') {
       // Do nothing.
    } else {
