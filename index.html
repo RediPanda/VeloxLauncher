@@ -43,9 +43,9 @@
         <div class="col-6 col-xl-4">
             <img class="hero-img" src="assets/img/minecraft-logo.png">
             <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
-                as a sm0l project.</p><a class="btn btn-primary" role="button" id="playBtn2" href="#">Play
-                Velox Reloaded</a><a class="btn btn-primary" role="button" id="updateBtn" href="#">Update
-                Test</a>
+                as a sm0l project.</p>
+            <button class="btn btn-primary" id="playBtn2">Play Velox Reloaded</button>
+            <button class="btn btn-primary" id="update-btn">Update Test</button>
             <div class="row">
                 <div class="col">
 
@@ -82,26 +82,27 @@
             </div>
         </div>
     </div>
-    <!-- The Modal -->
-    <div id="updateBar" class="modal d-none">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Mod Updater</h2>
+    <div id="download-bar" class="bg-transparent p-3 hidden">
+        <div class="row align-items-center">
+            <div class="col flex-grow-1">
+                <div class="progress bg-transparent-dark progress-download">
+                    <div class="progress-bar bg-white scanning" role="progressbar" style="width: 75%" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>Some text in the Modal Body</p>
-                <p>Some other text...</p>
-            </div>
-            <div class="modal-footer">
-                <p>Update Manager</p>
-
+            <div class="col-auto">
+                <div id="download-spinner" class="spinner-border text-white d-none" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div id="download-infotext" class="align-self-center text-center text-white ">
+                    <strong><span id="download-progress-percent">20</span>%</strong>
+                        (<span id="download-progress-time">01:02:03</span> left)
+                </div>
             </div>
         </div>
-
     </div>
+
     <div class="highlight-blue d-none">
         <div class="container">
             <div class="intro">
@@ -124,31 +125,8 @@
     <script src="assets/js/bs-init.js"></script>
 
     <script>
-        // Get the modal
-        var modal = document.getElementById("updateBar");
+        document.getElementById("update-btn").onclick = () => document.getElementById("download-bar").classList.toggle("hidden");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("updateBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            // modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                // modal.style.display = "none"; Do nothing biatch.
-            }
-        }
     </script>
 
     <!-- Insert this line after script imports -->
