@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RediLauncher</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Article-Dual-Column.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="src/karina-lib/sessionManager.js"></script>
+    <style>
+        body {
+            background-color: rgb(44, 47, 51);
+            background-image: url(&quot;assets/img/thumb-1920-609408.png&quot;);
+            background-repeat: repeat-x;
+            background-size: auto;
+            background-position: top;
+        }
+
+        #close-button {
+            filter: blur(0px) brightness(100%) contrast(100%) hue-rotate(0deg) sepia(0%);
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            -webkit-animation-name: fadeIn;
+            /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 100%;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes slideIn {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button p-3">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Velox Launcher</a><button data-toggle="collapse"
+                class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item text-white" role="presentation">
+                        <a class="nav-link active static" href="#">News</a></li>
+                    <li class="nav-item text-white" role="presentation">
+                        <a class="nav-link fromCenter" id="playBtn1" href="#">Play</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link text-white" data-toggle="dropdown" aria-expanded="false"
+                            href="#">Settings</a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="#">Launcher Options</a>
+                            <a class="dropdown-item" role="presentation" href="#">Account Options</a>
+                            <a class="dropdown-item" role="presentation" href="#">Services</a>
+                        </div>
+                    </li>
+                </ul>
+                <div id="accountPanel" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="mr-auto">Account Service</strong>
+                        <button type="button" class="ml-2 mb-1 close" aria-label="na">
+                            <span id="panelStatus" aria-hidden="true">&#8634;</span>
+                        </button>
+                    </div>
+                    <div id="panelText" class="toast-body p-0">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-2 py-1" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="mr-2 py-0"
+                                    src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
+                                    alt="dbmrawdata" width="50" height="50" style="border-radius: 25px;">
+                                MCUsernameBuffer
+                            </a>
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false"
+                                href="#">&nbsp;Settings</a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
+                                    href="#">🎮&nbsp;&nbsp;Launcher Options</a><a class="dropdown-item"
+                                    role="presentation" href="#">🔧 Account Options</a><a class="dropdown-item"
+                                    role="presentation" href="#">⚙️&nbsp;Services</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="close-button" class="btn btn-light bg-danger border rounded border-danger shadow action-button"
+                role="button" data-bs-hover-animate="jello" href="#" onclick="window.close()"><strong>Close</strong></a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="intro">
+                    <h2 color="text-white">Welcome to the Velox Launcher</h2>
+                    <p color="text-white">A custom made Minecraft Mod Launcher for private use as well
+                        as a sm0l project.</p><a class="btn btn-primary" role="button" id="playBtn2" href="#">Play
+                        Velox Reloaded</a><a class="btn btn-primary" role="button" id="updateBtn" href="#">Update
+                        Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="header-blue">
+            <div class="container hero">
+                <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+                        <h1 style="padding-top: -24px;padding-bottom: 20px;">Retrieving database data...</h1>
+                        <p>Please wait as we're establishing a handshake to the Velox Services...</p><button
+                            class="btn btn-light btn-lg action-button" type="button">Learn More</button>
+                    </div>
+                    <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                        <div class="iphone-mockup"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="updateBar" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Mod Updater</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <p>Update Manager</p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="highlight-blue">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Server Status</h2>
+            </div>
+            <span id="statusBar" class="badge badge-primary">Checking Status</span>
+        </div>
+    </div>
+    <div></div>
+    <!-- Insert this line above script imports  -->
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("updateBar");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("updateBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            // modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                // modal.style.display = "none"; Do nothing biatch.
+            }
+        }
+    </script>
+
+    <!-- Insert this line after script imports -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
+</body>
+
+</html>

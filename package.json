@@ -1,0 +1,30 @@
+{
+  "name": "redi-launcher",
+  "version": "1.0.0",
+  "description": "A custom Minecraft-mod launcher for a school project.",
+  "main": "exec.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "mac": "electron-builder --dir --mac"
+  },
+  "author": "RediPanda",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "chalk": "^4.0.0",
+    "download": "^8.0.0",
+    "download-file": "^0.1.5",
+    "electron": "^8.3.0",
+    "electron-packager": "^14.2.1",
+    "gamedig": "^2.0.20",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "randomatic": "^3.1.1",
+    "swup": "^2.0.9",
+    "v8-compile-cache": "^2.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.6.1"
+  }
+}
