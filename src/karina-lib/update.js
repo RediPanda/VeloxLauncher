@@ -3,7 +3,7 @@ const Setup = async (step) => {
    console.log(process.env)
    const atsume = require('./atsumeLib.js');
 
-   if (step == '1') {
+   if (step == '1') { // Initial client stuff
 
       // Class stable directory.
       if (!fs.existsSync(`${process.env.APPDATA}/devpanda`)) {
@@ -36,8 +36,6 @@ const Setup = async (step) => {
          }));
       }
 
-      
-
       // Instance directory.
       if (!fs.existsSync(`${process.env.APPDATA}/devpanda/instance`)) {
          fs.mkdirSync(`${process.env.APPDATA}/devpanda/instance`)
@@ -58,7 +56,7 @@ const Setup = async (step) => {
          fs.mkdirSync(`${process.env.APPDATA}/devpanda/cache`)
       }
 
-   } else if (step == '2') {
+   } else if (step == '2') { // 
       // Do nothing.
    } else {
       return process.exit();

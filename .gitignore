@@ -5,3 +5,4 @@ node_modules
 .history
 package-lock.json
 logs.txt
+logs

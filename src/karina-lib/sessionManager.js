@@ -97,7 +97,7 @@ async function serviceAuthentication() {
     if (obj.error === "ForbiddenOperationException") {
         atsume.logger(`API`, `[Session Manager @ Authentication]: Failed to authenticate user @${inputEmail}`)
         text.innerHTML = 'Failed to authenticate your login credentials!';
-        fs.writeFile('cache/session-lock.json', JSON.stringify({
+        fs.writeFile(`${process.env.APPDATA}/devpanda/cache/session-lock.json`, JSON.stringify({
             token: finalToken,
             date: Date.now(),
             boolean: 0
@@ -107,7 +107,7 @@ async function serviceAuthentication() {
     } else if (obj.accessToken) {
         atsume.logger(`API`, `[Session Manager @ Authentication]: Successfully authenticated user @${inputEmail}`)
         // text.innerHTML = 'Successfully validated your session!';
-        fs.writeFile('${process.env.APPDATA}/devpanda/cache/session-lock.json', JSON.stringify({
+        fs.writeFile(`${process.env.APPDATA}/devpanda/cache/session-lock.json`, JSON.stringify({
             token: finalToken,
             date: Date.now(),
             boolean: 1
