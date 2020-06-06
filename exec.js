@@ -15,6 +15,7 @@ function createWindow() {
     resizable: false,
     mpveable: true,
     ELECTRON_DISABLE_SECURITY_WARNINGS: false,
+    allowRunningInsecureContent: true,
     webPreferences: {
       nodeIntegration: true
     }

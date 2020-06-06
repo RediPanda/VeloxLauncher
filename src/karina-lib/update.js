@@ -1,6 +1,5 @@
 // Setup Service
 const Setup = async (step) => {
-   console.log(process.env)
    const atsume = require('./atsumeLib.js');
 
    if (step == '1') { // Initial client stuff
@@ -18,6 +17,12 @@ const Setup = async (step) => {
       // Profile directory
       if (!fs.existsSync(`${process.env.APPDATA}/devpanda/client/profile`)) {
          fs.mkdirSync(`${process.env.APPDATA}/devpanda/client/profile`)
+      }
+
+      // session.json
+      if (!fs.existsSync(`${process.env.APPDATA}/devpanda/client/session.json`)) {
+         fs.writeFileSync(`${process.env.APPDATA}/devpanda/client/session.json`, JSON.stringify({
+         }));
       }
       
       // Auth.json

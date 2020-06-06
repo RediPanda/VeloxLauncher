@@ -5,10 +5,12 @@ const random = require('randomatic');
 const Gamedig = require('gamedig');
 const extract = require('extract-zip');
 const mysql = require('mysql2');
+const moment = require('moment');
 
 // Internal libraries
 const atsume = require('./src/karina-lib/atsumeLib.js');
 const runtime = require('./src/karina-lib/runtime.js');
+const mojang = require('./src/karina-lib/server.js')
 
 // Internal variables.
 const localfileVersion = 'v1.0.2';
@@ -30,93 +32,7 @@ async function serviceAuthentication() {
     const text = document.getElementById('panelText');
     const status = document.getElementById('panelStatus');
 
-    atsume.logger(`INFO`, "[Session Manager @ fs]: Grabbing authentication packets...")
-
-    let inputEmail;
-    let inputPass;
-
-    try {
-        if (fs.existsSync('src/profile')) {
-            atsume.logger(`INFO`, "[Session Manager @ fs]: Profiler is present during load. Loading information to the module.")
-
-            let authDataRaw = await fs.readFileSync(`${process.env.APPDATA}/devpanda/client/profile/auth.json`, 'utf8')
-            let authData = JSON.parse(authDataRaw)
-
-            if (authData.email === undefined) {
-                if (confirm("[Velox Security Wall] Missing auth details (@username)")) {
-                    window.close()
-                } else {
-                    window.close()
-                }
-            } else if (authData.password === undefined) {
-                if (confirm("[Velox Security Wall] Missing auth details (@password)")) {
-                    window.close()
-                } else {
-                    window.close()
-                }
-            }
-            inputEmail = authData.email
-            inputPass = authData.password
-        }
-    } catch (err) {
-        alert("Failed to find the profiling directory!")
-        return atsume.logger(`ERROR`, err)
-    }
-
-    let body = {
-        "agent": { // defaults to Minecraft
-            "name": "Minecraft", // For Mojang's other game Scrolls, "Scrolls" should be used
-            "version": 1 // This number might be increased
-            // by the vanilla client in the future
-        },
-        "username": inputEmail, // Can be an email address or player name for
-        // unmigrated accounts
-        "password": inputPass,
-        "requestUser": true // optional; default: false; true adds the user object to the response
-    }
-
-    let obj;
-
-    atsume.logger(`API`, `[Session Manager]: Sending POST request to authserver.mojang.com/authenticate`);
-    atsume.logger(`API`, `[Session Manager]: Authenticating user under the identity - (${inputEmail})`)
-
-    await fetch('https://authserver.mojang.com/authenticate', {
-            method: 'POST',
-            body: JSON.stringify(body),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        }).then(res => res.json())
-        .then(json => {
-            // console.log(json)
-            obj = json
-        });
-
-        atsume.logger(`API`, `[Session Manager]: Received callback response.`);
-
-    if (obj.error === "ForbiddenOperationException") {
-        atsume.logger(`API`, `[Session Manager @ Authentication]: Failed to authenticate user @${inputEmail}`)
-        text.innerHTML = 'Failed to authenticate your login credentials!';
-        fs.writeFile(`${process.env.APPDATA}/devpanda/cache/session-lock.json`, JSON.stringify({
-            token: finalToken,
-            date: Date.now(),
-            boolean: 0
-        }), function (err, results) {
-            // console.log(err + '  ' + results) 
-        });
-    } else if (obj.accessToken) {
-        atsume.logger(`API`, `[Session Manager @ Authentication]: Successfully authenticated user @${inputEmail}`)
-        // text.innerHTML = 'Successfully validated your session!';
-        fs.writeFile(`${process.env.APPDATA}/devpanda/cache/session-lock.json`, JSON.stringify({
-            token: finalToken,
-            date: Date.now(),
-            boolean: 1
-        }), function (err, results) {
-            // console.log(err + '  ' + results)
-        });
-    } else {
-        return text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
-    }
+    mojang.authenticator();
 
 };
 
@@ -131,12 +47,13 @@ async function buttonListeners() {
     });
     */
 
-    document.getElementById("playBtn2").addEventListener("click", () => {
+    document.getElementById("playBtn2").addEventListener("click", async () => {
         alert('Launching the game. Please wait!')
-        runtime.runApplication('ipconfig');
+        let args = await runtime.createArguments();
+        runtime.runApplication(args);
     });
 
-    document.getElementById("updateBtn").addEventListener("click", () => {
+    document.getElementById("update-btn").addEventListener("click", () => {
         getUpdate();
     });
 
@@ -149,9 +66,9 @@ async function buttonListeners() {
         atsume.logger(`DATABASE`, `[Session Manager @ getUpdate]: Callback received.`);
         alert("Update getting. Please wait as we are checking the current version number.");
 
-        let versionBuffer = fs.readFileSync(`${process.env.APPDATA}/devpanda/client/profile/redis.json`)
-        let latestVersion = fetch()
-        if (versionBuffer) {}
+        //let versionBuffer = fs.readFileSync(`${process.env.APPDATA}/devpanda/client/profile/redis.json`)
+        //let latestVersion = fetch()
+        //if (versionBuffer) {}
     };
 
     // Once the DOM Content load, we shall check for any latest updates.
@@ -195,11 +112,11 @@ async function toolbarListeners() {
 };
 
 // On page load/app load, perform server status check.
-async function serverQuery() {
+async function serverQuery(debug) {
     atsume.logger(`INFO`, `[Session Manager]: Starting Server Query...`);
 
     setInterval(async function getServerQuery() {
-        atsume.logger(`API`, `[Session Manager @ Query]: Starting Heartbeat roundtrip...`);
+        if (debug === true) atsume.logger(`API`, `[Session Manager @ Query]: Starting Heartbeat roundtrip...`);
         // Obtain local storage files. If not, generate new ones.
         let contentData = fs.readFileSync('src/karina-lib/patch.json', 'utf8');
         let objectData = JSON.parse(contentData)
@@ -213,10 +130,10 @@ async function serverQuery() {
             host: objectData.serverBearer,
             maxAttempts: 3
         }).then((state) => {
-            atsume.logger(`API`, '[Server Query] Stacktrace Online ')
+            if (debug === true) atsume.logger(`API`, '[Server Query] Stacktrace Online ')
             status_boolean = 1;
         }).catch((error) => {
-            atsume.logger(`API`, '[Server Query] Stacktrace Offline ')
+            if (debug === true) atsume.logger(`API`, '[Server Query] Stacktrace Offline ')
             status_boolean = 0;
         });
 
@@ -245,9 +162,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Run the setup (includes the prerequisites checks.)
     let setupResult = await services.Setup(1);
 
-    serverQuery();
+    serverQuery(false);
     toolbarListeners();
-    // serviceAuthentication(); Disabled because Seiki is currently working on it.
+    serviceAuthentication(); //Disabled because Seiki is currently working on it.
     buttonListeners();
 
 });
