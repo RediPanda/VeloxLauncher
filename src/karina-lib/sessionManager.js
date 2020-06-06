@@ -169,6 +169,30 @@ async function buttonListeners() {
     };
 };
 
+async function toolbarListeners() {
+    // Electorn shit here.
+    const {remote} = require('electron');
+
+    document.getElementById('close-button').addEventListener('click', closeWindow);
+    document.getElementById('minimise-button').addEventListener('click', minimizeWindow);
+    document.getElementById('maximise-button').addEventListener('click', maximizeWindow);
+
+    function closeWindow() {
+        let window = remote.BrowserWindow.getFocusedWindow();
+        window.close();
+    }
+    
+    function minimizeWindow() {  
+        let window = remote.BrowserWindow.getFocusedWindow();
+        window.minimize();
+    }
+    
+    function maximizeWindow() {
+        let window = remote.BrowserWindow.getFocusedWindow();
+        window.isMaximized() ? window.unmaximize() : window.maximize();
+    }
+};
+
 // On page load/app load, perform server status check.
 async function serverQuery() {
     atsume.logger(`INFO`, `[Session Manager]: Starting Server Query...`);
@@ -212,21 +236,16 @@ async function serverQuery() {
 
 };
 
-// Setup check and apply.
-async function Setup() {
-    if (!fs.existsSync('src/profile/auth.json')) {
-        fs.writeFileSync('src/profile/auth.json', JSON.stringify({
-            email: 'undefined',
-            password: 'undefined'
-        }));
-    }
-}
-
 // On page load/app load, perform setup checks.
 document.addEventListener('DOMContentLoaded', async function() {
+    const services = require('./src/karina-lib/update.js');
     atsume.logger(`INFO`, `[Session Manager]: DOMContent Loaded! Starting other function services...`);
 
+    // Run the setup (includes the prerequisites checks.)
+    await services.Setup();
+
     serverQuery();
+    toolbarListeners();
     serviceAuthentication();
     buttonListeners();
 
