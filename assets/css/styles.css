@@ -5,24 +5,39 @@ body {
   overflow-x: hidden;
 }
 
+.main-container {
+  margin-top: 31px;
+}
+
+.title-controls-dragarea {
+  -webkit-app-region: drag;
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 4px;
+}
+
 .navbar {
+  background: rgba(0, 0, 0, 0.06);
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
-  user-select: none;    
+  user-select: none;
 }
 
 .btn-titlebar-close, .btn-titlebar {
   color: #ffffff;
+  border-radius: 0px;
 }
 
 .btn-titlebar-close:hover {
   color: #dc3545;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .btn-titlebar:hover {
-  color: #cccccc;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .btn-titlebar:focus, .btn-titlebar-close:focus {

@@ -23,46 +23,50 @@
 
 <body>
     <nav class="navbar fixed-top justify-content-end p-0">
-
-        <button class="nav-item nav-link btn btn-titlebar py-1" id="close-button" type="button" aria-label="Settings" role="button"
-            data-bs-hover-animate="jello" href="#"><i class="fas fa-cog"></i></button>
-        <span class="mx-2 text-white">|</span>
-        <button class="nav-item nav-link btn btn-titlebar py-1" id="minimise-button" type="button" aria-label="Minimize" role="button"
-            data-bs-hover-animate="jello" href="#">
-            <i class="fas fa-window-minimize"></i>
-        </button>
-        <button class="nav-item nav-link btn btn-titlebar py-1" id="maximise-button" type="button" aria-label="Maximize" role="button"
-            data-bs-hover-animate="jello" href="#">
-            <i class="far fa-window-maximize"></i>
-        </button>
-        <button class="nav-item nav-link btn btn-titlebar-close py-1" id="close-button" type="button" aria-label="Close" role="button"
-            data-bs-hover-animate="jello" href="#" onclick="window.close()">
+        <div class="title-controls-dragarea">&nbsp</div>
+        <div class="nav-item nav-link btn btn-sm btn-titlebar py-1" id="minimise-button" type="button"
+            aria-label="Minimize" role="button" href="#">
+            <i class="fas fa-window-minimize fa-sm"></i>
+        </div>
+        <div class="nav-item nav-link btn btn-sm btn-titlebar py-1" id="maximise-button" type="button"
+            aria-label="Maximize" role="button" href="#">
+            <i class="far fa-window-maximize fa-sm"></i>
+        </div>
+        <div class="nav-item nav-link btn btn-sm btn-titlebar-close py-1" id="close-button" type="button"
+            aria-label="Close" role="button" href="#" onclick="window.close()">
             <i class="fas fa-times fa-lg"></i>
-        </button>
-
-        <div class="d-none" id="accountPanel" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle px-2 py-1" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="mr-2 py-0"
-                        src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
-                        alt="dbmrawdata" width="50" height="50" style="border-radius: 25px;">
-                    MCUsernameBuffer
-                </a>
-            </div>
         </div>
     </nav>
 
-    <div class="row justify-content-center mt-5">
+    <div class="row main-container justify-content-center">
         <div class="col"></div>
         <div class="col-6 col-xl-4">
             <img class="hero-img" src="assets/img/minecraft-logo.png">
-            <p color="text-white">A custom made Minecraft Mod Launcher for private use as well
+            <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
                 as a sm0l project.</p><a class="btn btn-primary" role="button" id="playBtn2" href="#">Play
                 Velox Reloaded</a><a class="btn btn-primary" role="button" id="updateBtn" href="#">Update
                 Test</a>
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    <div class="" id="accountPanel" role="alert" aria-live="assertive" aria-atomic="true">
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col"></div>
+        <div class="col d-flex justify-content-end align-items-start">
+            <button class="btn text-white" href="#" id="navbarDropdown">
+                <img class="mr-2 py-0"
+                    src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
+                    alt="dbmrawdata" width="32" height="32" style="border-radius: 25px;">
+                MCUsernameBuffer
+            </button>
+        </div>
+    </div>
+
     </div>
     <div class="header-blue d-none">
         <div class="container hero">
