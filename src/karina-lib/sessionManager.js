@@ -56,17 +56,20 @@ async function buttonListeners() {
     document.getElementById("update-btn").addEventListener("click", () => {
         getUpdate();
     });
+
     async function getUpdate() {
-        atsume.logger(`DATABASE`, `[Session Manager @ getUpdate]: Callback received.`);
+        atsume.logger(`DATABASE`, `[Session Manager @ getUpdate]: Awaiting update.`);
         // alert("Update getting. Please wait as we are checking the current version number.");
         const playBtn = document.getElementById('playBtn2')
         const updateBtn = document.getElementById('update-btn')
-        const loadingBar = document.getElementById('load-bar')
+        const downloadBar = document.getElementById('download-bar');
 
         playBtn.disabled = true;
         updateBtn.disabled = true;
         playBtn.innerHTML = 'Update running!';
         updateBtn.innerHTML = 'Updating...';
+
+        downloadBar.classList.remove('hidden')
     };
 
     async function applyUpdate() {
@@ -176,7 +179,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Run the setup (includes the prerequisites checks.)
     let setupResult = await services.Setup(1);
 
-    serverQuery(false);
+    //serverQuery(false);
     toolbarListeners();
     serviceAuthentication(); //Disabled because Seiki is currently working on it.
     buttonListeners();
