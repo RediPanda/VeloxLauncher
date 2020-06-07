@@ -6,18 +6,18 @@ body {
 }
 
 .bg-transparent {
-  background: rgba(0, 0, 0, 0.2) !important
+  background: rgba(0, 0, 0, 0.06) !important
 }
 
 .bg-transparent-dark {
-  background: rgba(0, 0, 0, 0.5) !important
+  background: rgba(0, 0, 0, 0.25) !important
 }
 
 .bg-none {
   background: rgba(0,0,0,0) !important;
 }
 
-.main-container {
+.titlebar-offset {
   margin-top: 31px;
 }
 
@@ -81,6 +81,40 @@ body {
   transition: linear;
   animation: animatebottom 0.4s;
 }
+
+.spinner-border {
+  height: 1rem;
+  width: 1rem;
+}
+
+#auth-indicator {
+  color: #ffffff;
+
+  cursor:default !important;
+}
+
+#auth-indicator:focus {
+  box-shadow: 0 0 0 0;
+}
+
+#auth-indicator.flash {
+  border: 1px solid #ffffff;
+  transition: border 0.15s linear;
+}
+
+#auth-indicator-icon {
+  transition: all 1s linear;
+}
+
+.spinning svg {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg);
 
 @keyframes animatebottom {
   from {
