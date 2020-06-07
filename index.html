@@ -8,14 +8,6 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="assets/css/Article-Clean.css">
-    <link rel="stylesheet" href="assets/css/Article-Dual-Column.css">
-    <link rel="stylesheet" href="assets/css/Header-Blue.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="src/karina-lib/sessionManager.js"></script>
@@ -89,7 +81,7 @@
         </div>
     </div>
 
-    <div id="download-bar" class="bg-transparent p-3 hidden">
+    <section id="download-bar" class="bg-transparent p-3 hidden">
         <div class="row align-items-center">
             <div class="col flex-grow-1">
                 <div class="progress bg-transparent-dark progress-download">
@@ -107,18 +99,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="highlight-blue d-none">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Server Status</h2>
-            </div>
-            <span id="statusBar" class="badge badge-primary">Checking Status</span>
-        </div>
-    </div>
-    <div></div>
-    <!-- Insert this line above script imports  -->
     <script>
         if (typeof module === 'object') {
             window.module = module;
