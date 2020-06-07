@@ -89,8 +89,8 @@ body {
 
 #auth-indicator {
   color: #ffffff;
-
   cursor:default !important;
+  border-radius: 0px 0px .25rem .25rem;
 }
 
 #auth-indicator:focus {
