@@ -6,6 +6,7 @@ const Gamedig = require('gamedig');
 const extract = require('extract-zip');
 const mysql = require('mysql2');
 const moment = require('moment');
+const got = require('got');
 
 // Internal libraries
 const atsume = require('./src/karina-lib/atsumeLib.js');

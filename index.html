@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <section id="download-bar" class="bg-transparent px-3 pb-3 pt-2 ">
+    <section id="download-bar" class="bg-transparent px-3 pb-3 pt-2 hidden">
         <div id="download-infotext" class="text-white d-flex">
             <div class="col-auto p-0">
                 <span id="download-progresstext" class='text-left'>
@@ -69,7 +69,7 @@
             </div>
             <div class="col-auto p-0">
                 <strong>
-                    <span id="download-progress-percent">20</span>%
+                    <span id="download-progress-percent">20</span>
                 </strong>
                 <!-- (<span id="download-progress-time">01:02:03</span> left)</div> -->
             </div>
@@ -78,7 +78,7 @@
             <div class="col flex-grow-1">
                 <div class="progress bg-transparent-dark">
                     <div id="download-progress-bar" class="progress-bar bg-white scanning" role="progressbar"
-                        style="width: 75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        style="width: 75%; transition: width 0.05s !important" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                     </div>
                 </div>
             </div>

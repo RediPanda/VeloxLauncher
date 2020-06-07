@@ -12,9 +12,11 @@ async function buttonListeners() {
         const downloadBar = document.getElementById('download-bar');
         const syncbar = document.getElementById('download-bar-actualbar');
         const fs = require('fs');
+        const fsExtra = require('fs-extra')
         const fetch = require('node-fetch');
         const download = require('download');
         const extract = require('extract-zip');
+        const atsume = require('./atsumeLib.js')
 
         // alert('Launching the game. Please wait!')
         downloadBar.classList.remove('hidden')
@@ -36,23 +38,72 @@ async function buttonListeners() {
             .then(res => res.json())
             .then(json => getJSON = json);
 
-            updateLoadBar(true, '60%', 'Checking for updates...');
+        updateLoadBar(true, '60%', 'Checking for updates...');
 
         let latest = getJSON.launcher[2].latestModpackVersion;
 
         async function getSetUpdate() {
             if (currentVersion != latest) {
-                let array = getJSON.versions[0]
+                // let array = getJSON.versions[0]
+                // console.log(array)
+                let array = getJSON.versions[latest]
+                console.log(array.length)
                 // Start update shiet.
 
-                // Download all 
+                // Download all mod-related packages.
                 for (i = 0; i < array.length; i++) {
-                    updateLoadBar(true, '10%', `Downloading Patch ${i + 1} from the Resource Manager...`);
-                    fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`, await download(`http://www.veloxnetwork.ml/files/mods/${latest}/pack${i + 1}.zip`));
+                    atsume.logger(`INFO`, `Importing package ${i + 1}`);
+                    updateLoadBar(true, '0%', `Downloading Patch ${i + 1} from the Resource Manager...`);
+                    fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`,
+                        await download(`http://www.veloxnetwork.ml/files/mods/v${latest}/pack${i + 1}.zip`).on('downloadProgress', (callback) => {
+                            updateLoadBar(true, `${Math.round(callback.percent*100)}%`, `Downloading Patch ${i + 1} from the Resource Manager...`);
+                        }));
                     setTimeout(function finishCallback() {
                         updateLoadBar(true, '100%', `Resolving data from Patch ${i + 1} from the Resource Manager...`);
                     }, 950);
                 }
+
+                // Check and download instance package.
+                if (!fs.existsSync(`${process.env.APPDATA}\\devpanda\\instance\\bin\\minecraft.jar`)) {
+                    atsume.logger(`Importing package [MAIN INSTANCE PACKAGE]`);
+                    updateLoadBar(true, '0%', `Downloading instance.zip from the Resource Manager...`);
+                    fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\instance.zip`,
+                        await download(`http://www.veloxnetwork.ml/files/instance/v${latest}/instance.zip`).on('downloadProgress', (callback) => {
+                            updateLoadBar(true, `${Math.round(callback.percent*100)}%`, `Downloading instance.zip from the Resource Manager...`);
+                        }));
+                    setTimeout(function finishCallback() {
+                        updateLoadBar(true, '100%', `Resolving data from instance.zip from the Resource Manager...`);
+                    }, 950);
+
+                    // Now unpackage and install instance.
+                    atsume.logger(`INFO`, `Extracting the instance.zip file.`)
+                    updateLoadBar(true, '1%', `Extracting packet [instance.zip]`);
+                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\instance.zip`, {
+                        dir: `${process.env.APPDATA}\\devpanda\\instance`
+                    });
+                    updateLoadBar(true, '100%', `Extracting packet [instance.zip]`);
+                }
+
+                // Clear and re-apply mods to the instance folder.
+                try {
+                    fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\instance\\mods`);
+                } catch (err) {
+                    // Do nothing cause it means there was nothing in the first place.
+                }
+
+                atsume.logger(`INFO`, `Extracting individual mod packages.`)
+                updateLoadBar(true, '1%', `Extracting packet [Patch ${i + 1}]`);
+                for (i = 0; i < array.length; i++) {
+                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`, {
+                        dir: `${process.env.APPDATA}\\devpanda\\instance\\mods`
+                    });
+                    updateLoadBar(true, '100%', `Extracting packet [Patch ${i + 1}]`);
+                }
+
+                updateLoadBar(false, '0%', 'Done!');
+
+                // And finally, apply patch update to the version medium.
+                fs.writeFileSync(`${process.env.APPDATA}//devpanda//client//profile//modvar.json`, latest);
 
             } else {
                 // Continue on.
@@ -60,16 +111,14 @@ async function buttonListeners() {
         }
 
         await getSetUpdate();
-        updateLoadBar(true, '90%', 'Starting Forge Mod Loader...');
-
         setTimeout(function startGame() {
             updateLoadBar(true, '100%', 'Running Java arguments...');
             setTimeout(async function startGame() {
                 updateLoadBar(false, '0%', '.');
-                //let args = await runtime.createArguments();
-                //runtime.runApplication(args);
+                let args = await runtime.createArguments();
+                runtime.runApplication(args);
             }, 750)
-        }, 1500)
+        }, 2500)
 
     });
 
@@ -175,14 +224,15 @@ function updateLoadBar(boolean, percentage, text) {
 
     // First params (If it's visible.)
     if (boolean == true) {
-      downloadBar.classList.remove('hidden')
+        downloadBar.classList.remove('hidden')
     } else {
-      downloadBar.classList.add('hidden')
-      return;
+        downloadBar.classList.add('hidden')
+        return;
     }
 
     // Set percentage.
     syncbar.style.width = percentage;
+    $('#download-progress-percent').innerHTML = percentage;
 
     // Set text.
     textbar.innerHTML = text;
