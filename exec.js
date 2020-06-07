@@ -1,3 +1,5 @@
+'use strict';
+
 const {
   app,
   BrowserWindow,
@@ -5,7 +7,12 @@ const {
 } = require('electron')
 
 require('v8-compile-cache')
+ 
+const ignoredNode = /node_modules|[/\\]\./;
+const ignoredLogs = /logs|[/\\]\./; // all folder resorces => resources
 
+require('electron-reload')(__dirname, {ignored: [ignoredLogs, ignoredNode] });
+ 
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
