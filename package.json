@@ -5,6 +5,9 @@
   "main": "exec.js",
   "scripts": {
     "start": "electron .",
+    "dev": "electron . && start npm run dev-sass-watcher",
+    "dev-sass": "node-sass sass/style.scss -o ./assets/css",
+    "dev-sass-watcher": "npm run dev-sass && node-sass ./sass/style.scss -wo ./assets/css/",
     "pack": "electron-builder --dir",
     "mac": "electron-builder --dir --mac"
   },
@@ -12,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.5.0",
     "chalk": "^4.0.0",
     "cryptr": "^6.0.2",
     "download": "^8.0.0",
