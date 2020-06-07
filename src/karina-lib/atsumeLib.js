@@ -36,7 +36,7 @@ const logger = (type, arguments) => {
 
     let outputlog = `[STDOUT] [${type}] [${hour}:${minute}:${second}] :: ${arguments} \n`;
 
-    fs.appendFileSync('logs.txt', outputlog);
+    fs.appendFileSync('logs/applogs.txt', outputlog);
     console.log(outputlog)
 }
 
