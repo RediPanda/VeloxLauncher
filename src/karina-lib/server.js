@@ -7,7 +7,7 @@ const fetch = require('node-fetch'),
 const atsume = require('./atsumeLib.js'),
    runtime = require('./runtime.js'),
    cypher = require('./encrypt.js'),
-   f = require("../frontEndHandler");
+   f = require("./frontEndHandler");
 
 const authenticator = async () => {
    // DOM Elements.

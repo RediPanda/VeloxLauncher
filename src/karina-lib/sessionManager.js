@@ -11,7 +11,7 @@ const moment = require('moment');
 const atsume = require('./src/karina-lib/atsumeLib.js');
 const runtime = require('./src/karina-lib/runtime.js');
 const mojang = require('./src/karina-lib/server.js')
-const f = require('./src/frontEndHandler.js');
+const f = require('./src/karina-lib/frontEndHandler.js');
 
 // Internal variables.
 const localfileVersion = 'v1.0.2';

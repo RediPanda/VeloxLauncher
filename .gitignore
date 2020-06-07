@@ -8,3 +8,8 @@ logs.txt
 logs
 library
 config
+*.class
+llibrary/config.dat
+logs/latest.log
+logs/latest.log
+logs/latest.log
