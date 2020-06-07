@@ -41,12 +41,16 @@ const authenticator = async () => {
                window.close()
             }
          }
+         try {
          inputEmail = await cypher.decrypt(key, authData.email);
          inputPass = await cypher.decrypt(key, authData.password);
+         } catch(err) {
+            console.log(err);
+         }
 
       }
    } catch (err) {
-      alert("Failed to find the profiling directory! This issue only occurs if the authentication files were missing or cannot be parsed through our services. \n\nThis warning may be ignored, but it does flag that your account will not be used when launching the game.")
+      alert("Failed to find the profiling directory! This issue only occurs if the authentication files were missing or cannot be parsed through our services. \n\nThis warning may be ignored, but it will be beneficial for you to sign into your Mojang Account beforehand.")
       return atsume.logger(`ERROR`, err)
       console.log(err)
    }
@@ -112,7 +116,7 @@ const authenticator = async () => {
       f.$('#account-name').innerHTML = `${obj.selectedProfile.name}`
       f.flashAuthIndicator("Login Successful", "fa-check", false)
    } else {
-      text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
+      // text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
    }
 
    return obj;

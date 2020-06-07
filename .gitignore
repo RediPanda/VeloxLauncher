@@ -13,3 +13,4 @@ llibrary/config.dat
 logs/latest.log
 logs/latest.log
 logs/latest.log
+*.log

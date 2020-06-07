@@ -43,6 +43,31 @@ async function buttonListeners() {
         let latest = getJSON.launcher[2].latestModpackVersion;
 
         async function getSetUpdate() {
+            // Essential libraries and other necessities.
+
+            // Libraries
+            atsume.logger(`INFO`, `Importing package [Libraries]`);
+            updateLoadBar(true, '0%', `Downloading Patch (libraries) from the Resource Manager...`);
+            fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\libraries.zip`,
+                await download(`http://www.veloxnetwork.ml/files/essentials/v${latest}/libraries.zip`).on('downloadProgress', (callback) => {
+                    updateLoadBar(true, `${Math.round(callback.percent*100)}%`, `Downloading Patch (libraries) from the Resource Manager...`);
+                }));
+            setTimeout(function finishCallback() {
+                updateLoadBar(true, '100%', `Resolving data from Patch (libraries) from the Resource Manager...`);
+            }, 950);
+
+            // Libraries
+            atsume.logger(`INFO`, `Importing package [Assets]`);
+            updateLoadBar(true, '0%', `Downloading Patch (assets) from the Resource Manager...`);
+            fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\assets.zip`,
+                await download(`http://www.veloxnetwork.ml/files/essentials/v${latest}/assets.zip`).on('downloadProgress', (callback) => {
+                    updateLoadBar(true, `${Math.round(callback.percent*100)}%`, `Downloading Patch (assets) from the Resource Manager...`);
+                }));
+            setTimeout(function finishCallback() {
+                updateLoadBar(true, '100%', `Resolving data from Patch (assets) from the Resource Manager...`);
+            }, 950);
+
+            // Mod and Game files.
             if (currentVersion != latest) {
                 // let array = getJSON.versions[0]
                 // console.log(array)
@@ -87,6 +112,8 @@ async function buttonListeners() {
                 // Clear and re-apply mods to the instance folder.
                 try {
                     fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\instance\\mods`);
+                    fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\assets`);
+                    fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\libraries`);
                 } catch (err) {
                     // Do nothing cause it means there was nothing in the first place.
                 }
@@ -98,6 +125,24 @@ async function buttonListeners() {
                         dir: `${process.env.APPDATA}\\devpanda\\instance\\mods`
                     });
                     updateLoadBar(true, '100%', `Extracting packet [Patch ${i + 1}]`);
+                }
+
+                atsume.logger(`INFO`, `Extracting assets.`)
+                updateLoadBar(true, '1%', `Extracting packet [assets]`);
+                for (i = 0; i < array.length; i++) {
+                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\assets.zip`, {
+                        dir: `${process.env.APPDATA}\\devpanda\\assets`
+                    });
+                    updateLoadBar(true, '100%', `Extracting packet [assets]`);
+                }
+
+                atsume.logger(`INFO`, `Extracting libraries`)
+                updateLoadBar(true, '1%', `Extracting packet [libraries]`);
+                for (i = 0; i < array.length; i++) {
+                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\libraries.zip`, {
+                        dir: `${process.env.APPDATA}\\devpanda\\libraries`
+                    });
+                    updateLoadBar(true, '100%', `Extracting packet [libraries]`);
                 }
 
                 updateLoadBar(false, '0%', 'Done!');

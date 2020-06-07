@@ -171,7 +171,11 @@ const runApplication = (arguments) => {
         updateBtn.innerHTML = 'Update Test';
 
         // Electron stuff
-        window.focus();
+        try {
+            window.focus();
+        } catch (err) {
+            console.log(err)
+        }
     });
 }
 
