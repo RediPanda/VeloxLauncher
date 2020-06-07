@@ -48,7 +48,7 @@ async function buttonListeners() {
     */
 
     document.getElementById("playBtn2").addEventListener("click", async () => {
-        alert('Launching the game. Please wait!')
+        // alert('Launching the game. Please wait!')
         let args = await runtime.createArguments();
         runtime.runApplication(args);
     });
@@ -56,20 +56,31 @@ async function buttonListeners() {
     document.getElementById("update-btn").addEventListener("click", () => {
         getUpdate();
     });
+    async function getUpdate() {
+        atsume.logger(`DATABASE`, `[Session Manager @ getUpdate]: Callback received.`);
+        // alert("Update getting. Please wait as we are checking the current version number.");
+        const playBtn = document.getElementById('playBtn2')
+        const updateBtn = document.getElementById('update-btn')
+
+        playBtn.disabled = true;
+        updateBtn.disabled = true;
+        playBtn.innerHTML = 'Update running!';
+        updateBtn.innerHTML = 'Updating...';
+    };
 
     async function applyUpdate() {
         atsume.logger(`DATABASE`, `[Session Manager @ applyUpdate]: Callback received.`);
-        alert("Update applying.");
+        // alert("Update applying.");
     };
 
-    async function getUpdate() {
-        atsume.logger(`DATABASE`, `[Session Manager @ getUpdate]: Callback received.`);
-        alert("Update getting. Please wait as we are checking the current version number.");
-
-        //let versionBuffer = fs.readFileSync(`${process.env.APPDATA}/devpanda/client/profile/redis.json`)
-        //let latestVersion = fetch()
-        //if (versionBuffer) {}
+    async function finishUpdate() {
+        playBtn.disabled = false;
+        updateBtn.disabled = false;
+        playBtn.innerHTML = 'Play Velox Reloaded';
+        updateBtn.innerHTML = 'Update Test';
     };
+
+
 
     // Once the DOM Content load, we shall check for any latest updates.
     try {
@@ -77,7 +88,7 @@ async function buttonListeners() {
         if (fs.existsSync(`${process.env.APPDATA}/devpanda/client/profile`)) {
             atsume.logger(`INFO`, `[Session Manager @ apt-module]: Profile directory detected.`);
         }
-    } catch(err) {
+    } catch (err) {
         // Compile new profile settings based on SessionManager version.
         fs.writeFile(`${process.env.APPDATA}/devpanda/client/profile/launcher-settings.json`, JSON.stringify({
             version: localfileVersion
@@ -89,7 +100,9 @@ async function buttonListeners() {
 
 async function toolbarListeners() {
     // Electorn shit here.
-    const {remote} = require('electron');
+    const {
+        remote
+    } = require('electron');
 
     document.getElementById('close-button').addEventListener('click', closeWindow);
     document.getElementById('minimise-button').addEventListener('click', minimizeWindow);
@@ -99,12 +112,12 @@ async function toolbarListeners() {
         let window = remote.BrowserWindow.getFocusedWindow();
         window.close();
     }
-    
-    function minimizeWindow() {  
+
+    function minimizeWindow() {
         let window = remote.BrowserWindow.getFocusedWindow();
         window.minimize();
     }
-    
+
     function maximizeWindow() {
         let window = remote.BrowserWindow.getFocusedWindow();
         window.isMaximized() ? window.unmaximize() : window.maximize();
@@ -155,7 +168,7 @@ async function serverQuery(debug) {
 };
 
 // On page load/app load, perform setup checks.
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
     const services = require('./src/karina-lib/update.js');
     atsume.logger(`INFO`, `[Session Manager]: DOMContent Loaded! Starting other function services...`);
 

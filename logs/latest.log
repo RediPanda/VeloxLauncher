@@ -1,81 +1,178 @@
-[06Jun2020 16:26:26.451] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, fmlclient, --fml.forgeVersion, 31.1.77, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200414.225201, --username, LightningIce9, --version, 1.15.2-forge-31.1.77, --gameDir, C:\Users\Redi\Desktop\client\ver2\instance\, --assetsDir, C:\Users\Redi\Desktop\client\ver2\assets\, --assetIndex, 1.15, --uuid, 15a658d6084f48d2b606a6f34cb0db37, --accessToken, ????????, --userType, mojang, --versionType, release, --title, Forge, 1.15.2, -, Slate, --icon, C:\Users\Redi\Desktop\client\ver2\assets\packs\forge-1152-slate\icon.png]
-[06Jun2020 16:26:26.454] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.0+69+master.79f13f7 starting: java version 1.8.0_251 by Oracle Corporation
-[06Jun2020 16:26:26.963] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[06Jun2020 16:26:28.961] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.77, --gameDir, C:\Users\Redi\Desktop\client\ver2\instance, --assetsDir, C:\Users\Redi\Desktop\client\ver2\assets, --uuid, 15a658d6084f48d2b606a6f34cb0db37, --username, LightningIce9, --assetIndex, 1.15, --accessToken, ????????, --userType, mojang, --versionType, release, --title, Forge, 1.15.2, -, Slate, --icon, C:\Users\Redi\Desktop\client\ver2\assets\packs\forge-1152-slate\icon.png]
-[06Jun2020 16:26:29.050] [main/INFO] [STDOUT/]: [net.minecraft.client.main.Main:main:79]: Completely ignored arguments: [--title, Forge, 1.15.2, -, Slate, --icon, C:\Users\Redi\Desktop\client\ver2\assets\packs\forge-1152-slate\icon.png]
-[06Jun2020 16:26:31.197] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: LightningIce9
-[06Jun2020 16:26:39.214] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 build 10
-[06Jun2020 16:26:41.039] [modloading-worker-2/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.77, for MC 1.15.2 with MCP 20200414.225201
-[06Jun2020 16:26:41.039] [modloading-worker-2/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.77 Initialized
-[06Jun2020 16:26:44.084] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[06Jun2020 16:26:44.125] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[06Jun2020 16:26:44.347] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[06Jun2020 16:26:45.724] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 31.1.77 Target: 31.2.0
-[06Jun2020 16:26:47.467] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[06Jun2020 16:26:47.468] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[06Jun2020 16:26:47.648] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[06Jun2020 16:26:47.714] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
-[06Jun2020 16:26:47.715] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[06Jun2020 16:26:47.715] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[06Jun2020 16:26:47.716] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[06Jun2020 16:26:47.717] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[06Jun2020 16:26:47.717] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[06Jun2020 16:26:48.159] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[06Jun2020 16:26:48.160] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[06Jun2020 16:26:48.161] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[06Jun2020 16:26:49.341] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[06Jun2020 16:27:29.536] [Render thread/INFO] [net.minecraft.client.gui.screen.ConnectingScreen/]: Connecting to play.veloxnetwork.ml, 25565
-[06Jun2020 16:27:38.175] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[06Jun2020 16:27:38.176] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[06Jun2020 16:27:38.177] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[06Jun2020 16:27:38.177] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[06Jun2020 16:27:38.178] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[06Jun2020 16:27:38.225] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
-[06Jun2020 16:27:38.225] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
-[06Jun2020 16:27:38.338] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
-[06Jun2020 16:27:38.598] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, forge-1.15.2-31.1.77-universal.jar, fancymain_0.3.1_MC_1.15-1.15.2.jar, Placebo-1.15.2.jar
-[06Jun2020 16:27:39.102] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
-[06Jun2020 16:27:39.103] [Server thread/INFO] [placebo/]: Registered 0 additional recipes.
-[06Jun2020 16:27:39.103] [Server thread/INFO] [placebo/]: Beginning replacement of all shapeless recipes...
-[06Jun2020 16:27:39.119] [Server thread/INFO] [placebo/]: Successfully replaced 136 recipes with fast recipes.
-[06Jun2020 16:27:39.595] [Server thread/INFO] [placebo/]: Registered 0 additional loot tables.
-[06Jun2020 16:27:39.685] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 825 advancements
-[06Jun2020 16:27:39.960] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[06Jun2020 16:27:40.850] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[06Jun2020 16:27:40.851] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[06Jun2020 16:27:41.082] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 0%
-[06Jun2020 16:27:43.116] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[06Jun2020 16:27:43.116] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[06Jun2020 16:27:43.116] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[06Jun2020 16:27:43.116] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Preparing spawn area: 83%
-[06Jun2020 16:27:43.365] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 3396 ms
-[06Jun2020 16:27:43.726] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[06Jun2020 16:27:43.727] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[06Jun2020 16:27:43.728] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 6, from 10
-[06Jun2020 16:27:44.264] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[06Jun2020 16:27:44.322] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@6c9783d0
-[06Jun2020 16:27:44.333] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: LightningIce9[local:E:35449cb1] logged in with entity id 158 at (514.454677073817, 72.0, 142.30548249056523)
-[06Jun2020 16:27:44.359] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: LightningIce9 joined the game
-[06Jun2020 16:27:46.558] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 0 advancements
-[06Jun2020 16:27:46.807] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[06Jun2020 16:27:46.822] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[06Jun2020 16:27:48.528] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 3123ms or 62 ticks behind
-[06Jun2020 16:28:47.456] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[06Jun2020 16:28:47.459] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[06Jun2020 16:28:50.963] [Render thread/WARN] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
-[06Jun2020 16:28:56.663] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 7 advancements
-[06Jun2020 16:31:22.966] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 21 advancements
-[06Jun2020 16:31:23.156] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[06Jun2020 16:31:23.159] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[06Jun2020 16:31:23.719] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: LightningIce9 lost connection: Disconnected
-[06Jun2020 16:31:23.720] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: LightningIce9 left the game
-[06Jun2020 16:31:23.725] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[06Jun2020 16:31:23.757] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[06Jun2020 16:31:23.757] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[06Jun2020 16:31:23.757] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[06Jun2020 16:31:23.757] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'New World'/minecraft:overworld
-[06Jun2020 16:31:24.031] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[06Jun2020 16:31:24.040] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
-[06Jun2020 16:31:29.866] [MCO Compatability Checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[06Jun2020 16:31:29.866] [MCO Compatability Checker #1/ERROR] [com.mojang.realmsclient.RealmsMainScreen/]: Couldn't connect to realms: 
-[06Jun2020 16:31:34.942] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[11:53:54] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:53:54] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[11:53:54] [main/INFO]: Forge Mod Loader version 14.23.5.2847 for Minecraft 1.12.2 loading
+[11:53:54] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_251, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jre1.8.0_251
+[11:53:54] [main/WARN]: The coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin) is not signed!
+[11:53:54] [main/WARN]: The coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin) is not signed!
+[11:53:54] [main/INFO]: Searching C:\Users\Redi\AppData\Roaming\devpanda\instance\mods for mods
+[11:53:54] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:53:54] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:53:56] [main/INFO]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
+[11:53:56] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[11:53:56] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[11:53:56] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[11:53:56] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:53:56] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[11:53:56] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[11:53:57] [main/INFO]: [net.minecraft.client.main.Main:main:55]: Completely ignored arguments: [release, 1.12.2, --icon, C:\Users\Redi\AppData\Roaming\devpanda\assets\packs\forge-1122-official\icon.png, -, Slate, --title, Forge]
+[11:53:57] [Client thread/INFO]: Setting user: IAmRedi
+[11:54:00] [Client thread/WARN]: Skipping bad option: lastServer:
+[11:54:00] [Client thread/INFO]: LWJGL Version: 2.9.4
+[11:54:01] [Client thread/INFO]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_251, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 963009472 bytes (918 MB) / 1330118656 bytes (1268 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 3 total; -Xms1024m -Xmx2048m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 446.14' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+[11:54:01] [Client thread/INFO]: MinecraftForge v14.23.5.2847 Initialized
+[11:54:01] [Client thread/INFO]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[11:54:01] [Client thread/INFO]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[11:54:01] [Client thread/INFO]: Replaced 1227 ore ingredients
+[11:54:02] [Client thread/INFO]: Searching C:\Users\Redi\AppData\Roaming\devpanda\instance\mods for mods
+[11:54:02] [Client thread/INFO]: Forge Mod Loader has identified 5 mods to load
+[11:54:02] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, custommainmenu] at CLIENT
+[11:54:02] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, custommainmenu] at SERVER
+[11:54:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Custom Main Menu
+[11:54:03] [Client thread/INFO]: Processing ObjectHolder annotations
+[11:54:03] [Client thread/INFO]: Found 1169 ObjectHolder annotations
+[11:54:03] [Client thread/INFO]: Identifying ItemStackHolder annotations
+[11:54:03] [Client thread/INFO]: Found 0 ItemStackHolder annotations
+[11:54:03] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[11:54:03] [Forge Version Check/INFO]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[11:54:03] [Client thread/INFO]: Applying holder lookups
+[11:54:03] [Client thread/INFO]: Holder lookups applied
+[11:54:03] [Client thread/INFO]: Applying holder lookups
+[11:54:03] [Client thread/INFO]: Holder lookups applied
+[11:54:03] [Client thread/INFO]: Applying holder lookups
+[11:54:03] [Client thread/INFO]: Holder lookups applied
+[11:54:03] [Client thread/INFO]: Applying holder lookups
+[11:54:03] [Client thread/INFO]: Holder lookups applied
+[11:54:03] [Client thread/INFO]: Injecting itemstacks
+[11:54:03] [Client thread/INFO]: Itemstack injection complete
+[11:54:03] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:54:03] [Forge Version Check/INFO]: [forge] Found status: OUTDATED Target: 14.23.5.2854
+[11:54:03] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[11:54:03] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:54:03] [Thread-3/INFO]: Using sync timing. 200 frames of Display.update took 203877400 nanos
+[11:54:04] [Thread-5/INFO]: OpenAL initialized.
+[11:54:04] [Sound Library Loader/INFO]: Sound engine started
+[11:54:05] [Client thread/INFO]: Max texture size: 16384
+[11:54:06] [Client thread/INFO]: Created: 512x512 textures-atlas
+[11:54:07] [Client thread/INFO]: Applying holder lookups
+[11:54:07] [Client thread/INFO]: Holder lookups applied
+[11:54:07] [Client thread/INFO]: Injecting itemstacks
+[11:54:07] [Client thread/INFO]: Itemstack injection complete
+[11:54:07] [Client thread/INFO]: Forge Mod Loader has successfully loaded 5 mods
+[11:54:07] [Client thread/WARN]: Skipping bad option: lastServer:
+[11:54:07] [Client thread/INFO]: Narrator library for x64 successfully loaded
+[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/bg.png
+java.io.FileNotFoundException: mainmenu:textures/bg.png
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
+	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
+	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:344) [GuiCustom.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/bg_menu.png
+java.io.FileNotFoundException: mainmenu:textures/bg_menu.png
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
+	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
+	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:400) [GuiCustom.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/logo.png
+java.io.FileNotFoundException: mainmenu:textures/logo.png
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
+	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
+	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:400) [GuiCustom.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/btn.png
+java.io.FileNotFoundException: mainmenu:textures/btn.png
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
+	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
+	at lumien.custommainmenu.gui.GuiCustomButton.func_191745_a(GuiCustomButton.java:85) [GuiCustomButton.class:?]
+	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:435) [GuiCustom.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+[11:54:08] [Client thread/WARN]: Failed to load texture: minecraft:mainmenu/textures/btn.png
+java.io.FileNotFoundException: minecraft:mainmenu/textures/btn.png
+	at net.minecraft.client.resources.FallbackResourceManager.func_110536_a(FallbackResourceManager.java:69) ~[cei.class:?]
+	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:65) ~[cev.class:?]
+	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
+	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
+	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
+	at lumien.custommainmenu.gui.GuiCustomButton.func_191745_a(GuiCustomButton.java:85) [GuiCustomButton.class:?]
+	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:435) [GuiCustom.class:?]
+	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
+	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
+[11:54:11] [Client thread/INFO]: Stopping!
+[11:54:11] [Client thread/INFO]: SoundSystem shutting down...
+[11:54:11] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

@@ -12,8 +12,10 @@ function createWindow() {
     width: 1300,
     height: 700,
     frame: false,
-    resizable: false,
-    mpveable: true,
+    resizable: true,
+    moveable: true,
+    minWidth: 1200,
+    minHeight: 600,
     ELECTRON_DISABLE_SECURITY_WARNINGS: false,
     allowRunningInsecureContent: true,
     webPreferences: {
