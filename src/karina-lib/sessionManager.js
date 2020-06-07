@@ -61,6 +61,7 @@ async function buttonListeners() {
         // alert("Update getting. Please wait as we are checking the current version number.");
         const playBtn = document.getElementById('playBtn2')
         const updateBtn = document.getElementById('update-btn')
+        const loadingBar = document.getElementById('load-bar')
 
         playBtn.disabled = true;
         updateBtn.disabled = true;
