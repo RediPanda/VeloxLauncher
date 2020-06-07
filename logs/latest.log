@@ -1,178 +1,443 @@
-[11:53:54] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[11:53:54] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[11:53:54] [main/INFO]: Forge Mod Loader version 14.23.5.2847 for Minecraft 1.12.2 loading
-[11:53:54] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_251, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jre1.8.0_251
-[11:53:54] [main/WARN]: The coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin) is not signed!
-[11:53:54] [main/WARN]: The coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin) is not signed!
-[11:53:54] [main/INFO]: Searching C:\Users\Redi\AppData\Roaming\devpanda\instance\mods for mods
-[11:53:54] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[11:53:54] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[11:53:54] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[11:53:56] [main/INFO]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
-[11:53:56] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[11:53:56] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[11:53:56] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[11:53:56] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[11:53:56] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[11:53:56] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[11:53:57] [main/INFO]: [net.minecraft.client.main.Main:main:55]: Completely ignored arguments: [release, 1.12.2, --icon, C:\Users\Redi\AppData\Roaming\devpanda\assets\packs\forge-1122-official\icon.png, -, Slate, --title, Forge]
-[11:53:57] [Client thread/INFO]: Setting user: IAmRedi
-[11:54:00] [Client thread/WARN]: Skipping bad option: lastServer:
-[11:54:00] [Client thread/INFO]: LWJGL Version: 2.9.4
-[11:54:01] [Client thread/INFO]: -- System Details --
+[14:08:33] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:08:33] [main/INFO]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:08:33] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:08:33] [main/INFO]: Forge Mod Loader version 14.23.5.2847 for Minecraft 1.12.2 loading
+[14:08:33] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_251, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jre1.8.0_251
+[14:08:34] [main/WARN]: The coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin) is not signed!
+[14:08:34] [main/WARN]: The coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin) is not signed!
+[14:08:34] [main/INFO]: Searching C:\Users\Redi\AppData\Roaming\devpanda\instance\mods for mods
+[14:08:34] [main/INFO]: Loading tweaker optifine.OptiFineForgeTweaker from OptiFine_1.12.2_HD_U_F5 (1).jar
+[14:08:34] [main/WARN]: Found FMLCorePluginContainsFMLMod marker in ResourceLoader-MC1.12.1-1.5.3.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
+[14:08:34] [main/WARN]: The coremod lumien.resourceloader.asm.LoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[14:08:34] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:08:34] [main/INFO]: Loading tweak class name optifine.OptiFineForgeTweaker
+[14:08:34] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:08:34] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:08:34] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:08:34] [main/INFO]: Calling tweak class optifine.OptiFineForgeTweaker
+[14:08:34] [main/INFO]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: acceptOptions
+[14:08:34] [main/INFO]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: injectIntoClassLoader
+[14:08:34] [main/INFO]: [optifine.OptiFineClassTransformer:dbg:242]: OptiFine ClassTransformer
+[14:08:34] [main/INFO]: [optifine.OptiFineClassTransformer:dbg:242]: OptiFine ZIP file: C:\Users\Redi\AppData\Roaming\devpanda\instance\mods\OptiFine_1.12.2_HD_U_F5 (1).jar
+[14:08:34] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:08:35] [main/INFO]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
+[14:08:35] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[14:08:35] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:08:35] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:08:35] [main/INFO]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:08:35] [main/INFO]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:08:35] [main/INFO]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:08:35] [main/INFO]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: getLaunchArguments
+[14:08:35] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[14:08:36] [main/INFO]: [net.minecraft.client.main.Main:main:55]: Completely ignored arguments: [release, 1.12.2, --icon, C:\Users\Redi\AppData\Roaming\devpanda\assets\packs\forge-1122-official\icon.png, -, Slate, --title, Forge]
+[14:08:36] [Client thread/INFO]: Setting user: IAmRedi
+[14:08:38] [Client thread/INFO]: [OptiFine] *** Reflector Forge ***
+[14:08:38] [Client thread/INFO]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
+[14:08:39] [Client thread/INFO]: [OptiFine] *** Reflector Vanilla ***
+[14:08:39] [Client thread/WARN]: Skipping bad option: lastServer:
+[14:08:39] [Client thread/INFO]: LWJGL Version: 2.9.4
+[14:08:40] [Client thread/INFO]: [OptiFine] 
+[14:08:40] [Client thread/INFO]: [OptiFine] OptiFine_1.12.2_HD_U_F5
+[14:08:40] [Client thread/INFO]: [OptiFine] Build: 20191204-141934
+[14:08:40] [Client thread/INFO]: [OptiFine] OS: Windows 10 (amd64) version 10.0
+[14:08:40] [Client thread/INFO]: [OptiFine] Java: 1.8.0_251, Oracle Corporation
+[14:08:40] [Client thread/INFO]: [OptiFine] VM: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+[14:08:40] [Client thread/INFO]: [OptiFine] LWJGL: 2.9.4
+[14:08:40] [Client thread/INFO]: [OptiFine] OpenGL: GeForce RTX 2060/PCIe/SSE2, version 4.6.0 NVIDIA 446.14, NVIDIA Corporation
+[14:08:40] [Client thread/INFO]: [OptiFine] OpenGL Version: 4.6.0
+[14:08:40] [Client thread/INFO]: [OptiFine] Maximum texture size: 32768x32768
+[14:08:40] [VersionCheck/INFO]: [OptiFine] Checking for new version
+[14:08:40] [Client thread/INFO]: [Shaders] OpenGL Version: 4.6.0 NVIDIA 446.14
+[14:08:40] [Client thread/INFO]: [Shaders] Vendor:  NVIDIA Corporation
+[14:08:40] [Client thread/INFO]: [Shaders] Renderer: GeForce RTX 2060/PCIe/SSE2
+[14:08:40] [Client thread/INFO]: [Shaders] Capabilities:  2.0  2.1  3.0  3.2  4.0 
+[14:08:40] [Client thread/INFO]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
+[14:08:40] [Client thread/INFO]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
+[14:08:40] [Client thread/INFO]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[14:08:40] [Client thread/INFO]: [Shaders] Load shaders configuration.
+[14:08:40] [Client thread/INFO]: [Shaders] Save shaders configuration.
+[14:08:40] [Client thread/INFO]: [Shaders] No shaderpack loaded.
+[14:08:40] [Client thread/INFO]: [OptiFine] [Shaders] Delayed loading of block mappings after resources are loaded
+[14:08:40] [Client thread/INFO]: [OptiFine] [Shaders] Delayed loading of item mappings after resources are loaded
+[14:08:40] [Client thread/INFO]: [OptiFine] [Shaders] Delayed loading of entity mappings after resources are loaded
+[14:08:40] [Client thread/INFO]: Forge Mod Loader has detected optifine OptiFine_1.12.2_HD_U_F5, enabling compatibility features
+[14:08:40] [Client thread/INFO]: -- System Details --
 Details:
 	Minecraft Version: 1.12.2
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_251, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 963009472 bytes (918 MB) / 1330118656 bytes (1268 MB) up to 1908932608 bytes (1820 MB)
-	JVM Flags: 3 total; -Xms1024m -Xmx2048m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Memory: 6241833472 bytes (5952 MB) / 7059013632 bytes (6732 MB) up to 7059013632 bytes (6732 MB)
+	JVM Flags: 3 total; -Xms6969m -Xmx7048m -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
 	Loaded coremods (and transformers): 
+LoadingPlugin (ResourceLoader-MC1.12.1-1.5.3.jar)
+  lumien.resourceloader.asm.ClassTransformer
 	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 446.14' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
-[11:54:01] [Client thread/INFO]: MinecraftForge v14.23.5.2847 Initialized
-[11:54:01] [Client thread/INFO]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[11:54:01] [Client thread/INFO]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[11:54:01] [Client thread/INFO]: Replaced 1227 ore ingredients
-[11:54:02] [Client thread/INFO]: Searching C:\Users\Redi\AppData\Roaming\devpanda\instance\mods for mods
-[11:54:02] [Client thread/INFO]: Forge Mod Loader has identified 5 mods to load
-[11:54:02] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, custommainmenu] at CLIENT
-[11:54:02] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, custommainmenu] at SERVER
-[11:54:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Custom Main Menu
-[11:54:03] [Client thread/INFO]: Processing ObjectHolder annotations
-[11:54:03] [Client thread/INFO]: Found 1169 ObjectHolder annotations
-[11:54:03] [Client thread/INFO]: Identifying ItemStackHolder annotations
-[11:54:03] [Client thread/INFO]: Found 0 ItemStackHolder annotations
-[11:54:03] [Client thread/INFO]: Configured a dormant chunk cache size of 0
-[11:54:03] [Forge Version Check/INFO]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[11:54:03] [Client thread/INFO]: Applying holder lookups
-[11:54:03] [Client thread/INFO]: Holder lookups applied
-[11:54:03] [Client thread/INFO]: Applying holder lookups
-[11:54:03] [Client thread/INFO]: Holder lookups applied
-[11:54:03] [Client thread/INFO]: Applying holder lookups
-[11:54:03] [Client thread/INFO]: Holder lookups applied
-[11:54:03] [Client thread/INFO]: Applying holder lookups
-[11:54:03] [Client thread/INFO]: Holder lookups applied
-[11:54:03] [Client thread/INFO]: Injecting itemstacks
-[11:54:03] [Client thread/INFO]: Itemstack injection complete
-[11:54:03] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[11:54:03] [Forge Version Check/INFO]: [forge] Found status: OUTDATED Target: 14.23.5.2854
-[11:54:03] [Thread-5/INFO]: Initializing LWJGL OpenAL
-[11:54:03] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[11:54:03] [Thread-3/INFO]: Using sync timing. 200 frames of Display.update took 203877400 nanos
-[11:54:04] [Thread-5/INFO]: OpenAL initialized.
-[11:54:04] [Sound Library Loader/INFO]: Sound engine started
-[11:54:05] [Client thread/INFO]: Max texture size: 16384
-[11:54:06] [Client thread/INFO]: Created: 512x512 textures-atlas
-[11:54:07] [Client thread/INFO]: Applying holder lookups
-[11:54:07] [Client thread/INFO]: Holder lookups applied
-[11:54:07] [Client thread/INFO]: Injecting itemstacks
-[11:54:07] [Client thread/INFO]: Itemstack injection complete
-[11:54:07] [Client thread/INFO]: Forge Mod Loader has successfully loaded 5 mods
-[11:54:07] [Client thread/WARN]: Skipping bad option: lastServer:
-[11:54:07] [Client thread/INFO]: Narrator library for x64 successfully loaded
-[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/bg.png
-java.io.FileNotFoundException: mainmenu:textures/bg.png
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
-	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
-	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:344) [GuiCustom.class:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
-	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
-	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/bg_menu.png
-java.io.FileNotFoundException: mainmenu:textures/bg_menu.png
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
-	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
-	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:400) [GuiCustom.class:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
-	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
-	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/logo.png
-java.io.FileNotFoundException: mainmenu:textures/logo.png
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
-	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
-	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:400) [GuiCustom.class:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
-	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
-	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-[11:54:08] [Client thread/WARN]: Failed to load texture: mainmenu:textures/btn.png
-java.io.FileNotFoundException: mainmenu:textures/btn.png
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:69) ~[cev.class:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
-	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
-	at lumien.custommainmenu.gui.GuiCustomButton.func_191745_a(GuiCustomButton.java:85) [GuiCustomButton.class:?]
-	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:435) [GuiCustom.class:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
-	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
-	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-[11:54:08] [Client thread/WARN]: Failed to load texture: minecraft:mainmenu/textures/btn.png
-java.io.FileNotFoundException: minecraft:mainmenu/textures/btn.png
-	at net.minecraft.client.resources.FallbackResourceManager.func_110536_a(FallbackResourceManager.java:69) ~[cei.class:?]
-	at net.minecraft.client.resources.SimpleReloadableResourceManager.func_110536_a(SimpleReloadableResourceManager.java:65) ~[cev.class:?]
-	at net.minecraft.client.renderer.texture.SimpleTexture.func_110551_a(SourceFile:28) ~[cdm.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110579_a(TextureManager.java:69) [cdr.class:?]
-	at net.minecraft.client.renderer.texture.TextureManager.func_110577_a(TextureManager.java:44) [cdr.class:?]
-	at lumien.custommainmenu.lib.textures.TextureResourceLocation.bind(TextureResourceLocation.java:16) [TextureResourceLocation.class:?]
-	at lumien.custommainmenu.gui.GuiCustomButton.func_191745_a(GuiCustomButton.java:85) [GuiCustomButton.class:?]
-	at lumien.custommainmenu.gui.GuiCustom.func_73863_a(GuiCustom.java:435) [GuiCustom.class:?]
-	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:396) [ForgeHooksClient.class:?]
-	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1124) [buq.class:?]
-	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119) [bib.class:?]
-	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398) [bib.class:?]
-	at net.minecraft.client.main.Main.main(SourceFile:123) [Main.class:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.12.jar:?]
-	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.12.jar:?]
-[11:54:11] [Client thread/INFO]: Stopping!
-[11:54:11] [Client thread/INFO]: SoundSystem shutting down...
-[11:54:11] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[14:08:40] [Client thread/INFO]: MinecraftForge v14.23.5.2847 Initialized
+[14:08:40] [Client thread/INFO]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[14:08:40] [Client thread/INFO]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[14:08:40] [Client thread/INFO]: Replaced 1227 ore ingredients
+[14:08:40] [Client thread/INFO]: Searching C:\Users\Redi\AppData\Roaming\devpanda\instance\mods for mods
+[14:08:41] [VersionCheck/INFO]: [OptiFine] Version found: D3
+[14:08:41] [Client thread/INFO]: Forge Mod Loader has identified 10 mods to load
+[14:08:41] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at CLIENT
+[14:08:41] [Client thread/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:08:42] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Baubles, FMLFileResourcePack:Botania, FMLFileResourcePack:Custom Main Menu, FMLFileResourcePack:Waila, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Resource Loader, CustomResources, CustomOverridingResources
+[14:08:42] [Client thread/INFO]: Processing ObjectHolder annotations
+[14:08:42] [Client thread/INFO]: Found 1171 ObjectHolder annotations
+[14:08:42] [Client thread/INFO]: Identifying ItemStackHolder annotations
+[14:08:42] [Client thread/INFO]: Found 0 ItemStackHolder annotations
+[14:08:42] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[14:08:42] [Forge Version Check/INFO]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14:08:42] [Thread-3/INFO]: Using sync timing. 200 frames of Display.update took 387038600 nanos
+[14:08:43] [Forge Version Check/INFO]: [forge] Found status: OUTDATED Target: 14.23.5.2854
+[14:08:43] [Client thread/INFO]: Applying holder lookups
+[14:08:43] [Client thread/INFO]: Holder lookups applied
+[14:08:43] [Client thread/INFO]: Applying holder lookups
+[14:08:43] [Client thread/INFO]: Holder lookups applied
+[14:08:43] [Client thread/INFO]: Applying holder lookups
+[14:08:43] [Client thread/INFO]: Holder lookups applied
+[14:08:43] [Client thread/INFO]: OBJLoader: Domain botania has been added.
+[14:08:43] [Client thread/INFO]: Applying holder lookups
+[14:08:43] [Client thread/INFO]: Holder lookups applied
+[14:08:43] [Client thread/INFO]: Injecting itemstacks
+[14:08:43] [Client thread/INFO]: Itemstack injection complete
+[14:08:43] [Client thread/INFO]: [OptiFine] *** Reloading textures ***
+[14:08:43] [Client thread/INFO]: [OptiFine] Resource packs: Default
+[14:08:44] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[14:08:44] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[14:08:44] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:08:44] [Thread-5/INFO]: OpenAL initialized.
+[14:08:44] [Sound Library Loader/INFO]: Sound engine started
+[14:08:45] [Client thread/INFO]: [OptiFine] Mipmap levels: 4
+[14:08:45] [Client thread/INFO]: [OptiFine] Multitexture: false
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/0_glass_white/glass_pane_white.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/0_glass_white/glass_white.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/10_glass_purple/glass_pane_purple.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/10_glass_purple/glass_purple.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/11_glass_blue/glass_blue.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/11_glass_blue/glass_pane_blue.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/12_glass_brown/glass_brown.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/12_glass_brown/glass_pane_brown.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/13_glass_green/glass_green.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/13_glass_green/glass_pane_green.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/14_glass_red/glass_pane_red.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/14_glass_red/glass_red.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/15_glass_black/glass_black.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/15_glass_black/glass_pane_black.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/1_glass_orange/glass_orange.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/1_glass_orange/glass_pane_orange.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/2_glass_magenta/glass_magenta.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/2_glass_magenta/glass_pane_magenta.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/3_glass_light_blue/glass_light_blue.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/3_glass_light_blue/glass_pane_light_blue.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/4_glass_yellow/glass_pane_yellow.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/4_glass_yellow/glass_yellow.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/5_glass_lime/glass_lime.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/5_glass_lime/glass_pane_lime.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/6_glass_pink/glass_pane_pink.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/6_glass_pink/glass_pink.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/7_glass_gray/glass_gray.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/7_glass_gray/glass_pane_gray.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/8_glass_silver/glass_pane_silver.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/8_glass_silver/glass_silver.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/9_glass_cyan/glass_cyan.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/9_glass_cyan/glass_pane_cyan.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/bookshelf.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/glass.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/glasspane.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] ConnectedTextures: mcpatcher/ctm/default/sandstone.properties
+[14:08:45] [Client thread/INFO]: [OptiFine] Multipass connected textures: false
+[14:08:45] [Client thread/INFO]: [OptiFine] BetterGrass: Parsing default configuration optifine/bettergrass.properties
+[14:08:47] [Client thread/INFO]: [OptiFine] Custom loader sprites: 3
+[14:08:47] [Client thread/INFO]: [OptiFine] Sprite dependencies: 5
+[14:08:47] [Client thread/INFO]: Created: 1024x1024 textures-atlas
+[14:08:47] [Client thread/INFO]: [OptiFine] Animated sprites: 54
+[14:08:48] [Client thread/INFO]: Applying holder lookups
+[14:08:48] [Client thread/INFO]: Holder lookups applied
+[14:08:48] [Client thread/INFO]: Created: 128x256 textures-atlas
+[14:08:48] [Client thread/INFO]: Injecting itemstacks
+[14:08:48] [Client thread/INFO]: Itemstack injection complete
+[14:08:48] [Client thread/INFO]: The Lexica Botania has 26614 words.
+[14:08:48] [Client thread/INFO]: Starting JEI...
+[14:08:49] [Client thread/INFO]: Registering recipe categories...
+[14:08:49] [Client thread/INFO]: Registering recipe categories took 27.54 ms
+[14:08:49] [Client thread/INFO]: Registering mod plugins...
+[14:08:49] [Client thread/INFO]: Registering mod plugins took 134.1 ms
+[14:08:49] [Client thread/INFO]: Building recipe registry...
+[14:08:49] [Client thread/INFO]: Building recipe registry took 78.94 ms
+[14:08:49] [Client thread/INFO]: Building ingredient list...
+[14:08:49] [Client thread/INFO]: Building ingredient list took 29.42 ms
+[14:08:49] [Client thread/INFO]: Building ingredient filter...
+[14:08:49] [Client thread/INFO]: Building ingredient filter took 127.0 ms
+[14:08:49] [Client thread/INFO]: Building bookmarks...
+[14:08:49] [Client thread/INFO]: Building bookmarks took 3.393 ms
+[14:08:49] [Client thread/INFO]: Building runtime...
+[14:08:49] [Client thread/INFO]: Building runtime took 62.44 ms
+[14:08:49] [Client thread/INFO]: Starting JEI took 587.1 ms
+[14:08:49] [Client thread/INFO]: Starting Waila...
+[14:08:49] [Client thread/INFO]: Gathering annotated plugins...
+[14:08:49] [Client thread/INFO]: Gathering wrapped IMC plugins...
+[14:08:49] [Client thread/INFO]: Registering plugins...
+[14:08:49] [Client thread/INFO]: Registering plugin at mcp.mobius.waila.addons.core.PluginCore
+[14:08:49] [Client thread/INFO]: Registering plugin at mcp.mobius.waila.addons.capability.PluginCapability
+[14:08:49] [Client thread/INFO]: Registering plugin at mcp.mobius.waila.addons.minecraft.PluginMinecraft
+[14:08:49] [Client thread/INFO]: Starting Waila took 23.50 ms
+[14:08:49] [Client thread/INFO]: Forge Mod Loader has successfully loaded 10 mods
+[14:08:49] [Client thread/WARN]: Skipping bad option: lastServer:
+[14:08:49] [Client thread/INFO]: Narrator library for x64 successfully loaded
+[14:08:49] [Client thread/INFO]: [OptiFine] *** Reloading custom textures ***
+[14:08:55] [Netty Client IO #0/INFO]: Attempting connection with missing mods [custommainmenu, resourceloader] at SERVER
+[14:08:59] [Netty Client IO #1/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:09:00] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:09:30] [Netty Client IO #3/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:09:31] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:10:02] [Netty Client IO #4/INFO]: Unexpected packet during modded negotiation - assuming vanilla or keepalives : net.minecraft.network.play.server.SPacketDisconnect
+[14:11:08] [Netty Client IO #5/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:11:22] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:11:34] [Netty Client IO #7/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:11:35] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:12:06] [Netty Client IO #8/INFO]: Unexpected packet during modded negotiation - assuming vanilla or keepalives : net.minecraft.network.play.server.SPacketDisconnect
+[14:13:03] [Netty Client IO #9/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:13:05] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:13:07] [Netty Client IO #10/INFO]: Server protocol version 2
+[14:13:07] [Netty Client IO #10/INFO]: Attempting connection with missing mods [custommainmenu, resourceloader] at SERVER
+[14:13:07] [Client thread/INFO]: Injecting existing registry data into this client instance
+[14:13:07] [Client thread/INFO]: Applying holder lookups
+[14:13:07] [Client thread/INFO]: Holder lookups applied
+[14:13:07] [Netty Client IO #10/INFO]: [Netty Client IO #10] Client side modded connection established
+[14:13:07] [Netty Client IO #10/INFO]: Received server authentication msg. Remote sync will be activated
+[14:13:09] [Client thread/INFO]: [CHAT] IAmRedi joined the game
+[14:13:16] [Client thread/INFO]: [CHAT] You do not have permission to use this command
+[14:13:22] [Client thread/INFO]: [CHAT] [Server: Opped IAmRedi]
+[14:13:24] [Client thread/INFO]: [CHAT] Your game mode has been updated to Creative Mode
+[14:13:36] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:13:38] [Client thread/INFO]: [CHAT] Not enough arguments!
+[14:13:38] [Client thread/INFO]: [CHAT] Usage: /sponge which|mods|audit|plugins|timings|metrics|heap|version|<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] chunks|tps|<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] reload|save|config
+[14:13:46] [Client thread/INFO]: [CHAT] ============= Showing Help (/page <page>): ==============
+[14:13:46] [Client thread/INFO]: [CHAT] Tip: Use the <tab> key while typing a command to auto-complete the command or its arguments
+[14:13:46] [Client thread/INFO]: [CHAT] /advancement /advancement <grant|revoke|test> <player>
+[14:13:46] [Client thread/INFO]: [CHAT] /ban /ban <name> [reason ...]
+[14:13:46] [Client thread/INFO]: [CHAT] /ban-ip /ban-ip <address|name> [reason ...]
+[14:13:46] [Client thread/INFO]: [CHAT] /banlist /banlist [ips|players]
+[14:13:46] [Client thread/INFO]: [CHAT] /baubles /baubles <action> [<player> [<params>]]
+[14:13:46] [Client thread/INFO]: [CHAT] /blockdata /blockdata <x> <y> <z> <dataTag>
+[14:13:46] [Client thread/INFO]: [CHAT] /botania-open <entry>
+[14:13:46] [Client thread/INFO]: [CHAT] /botania-share <entry>
+[14:13:46] [Client thread/INFO]: [CHAT] /callback Execute a callback registered as part of a Text object. Primarily for internal use
+[14:13:46] [Client thread/INFO]: [CHAT] /clear /clear [player] [item] [data] [maxCount] [dataTag]
+[14:13:46] [Client thread/INFO]: [CHAT] /clone /clone <x1> <y1> <z1> <x2> <y2> <z2> <x> <y> <z> [maskMode] [cloneMode]
+[14:13:46] [Client thread/INFO]: [CHAT] /debug /debug <start|stop>
+[14:13:46] [Client thread/INFO]: [CHAT] /defaultgamemode /defaultgamemode <mode>
+[14:13:46] [Client thread/INFO]: [CHAT] /deop /deop <player>
+[14:13:46] [Client thread/INFO]: [CHAT] ====================== « 1/5 » =======================
+[14:13:48] [Client thread/INFO]: [CHAT] ============= Showing Help (/page <page>): ==============
+[14:13:48] [Client thread/INFO]: [CHAT] /difficulty /difficulty <new difficulty>
+[14:13:48] [Client thread/INFO]: [CHAT] /dumphandlers /dumphandlers
+[14:13:48] [Client thread/INFO]: [CHAT] /effect /effect <player> <effect> [seconds] [amplifier] [hideParticles] OR /effect <player> clear
+[14:13:48] [Client thread/INFO]: [CHAT] /enchant /enchant <player> <enchantment ID> [level]
+[14:13:48] [Client thread/INFO]: [CHAT] /entitydata /entitydata <entity> <dataTag>
+[14:13:48] [Client thread/INFO]: [CHAT] /execute /execute <entity> <x> <y> <z> <command> OR /execute <entity> <x> <y> <z> detect <x> <y> <z> <block> <dataValue|-1|state|*> <command>
+[14:13:48] [Client thread/INFO]: [CHAT] /fill /fill <x1> <y1> <z1> <x2> <y2> <z2> <block> [dataValue|state] [oldBlockHandling] [dataTag]
+[14:13:48] [Client thread/INFO]: [CHAT] /forge Use /forge <subcommand>
+[14:13:48] [Client thread/INFO]: [CHAT] /function /function <name> [if <selector>|unless <selector>]
+[14:13:48] [Client thread/INFO]: [CHAT] /gamemode /gamemode <mode> [player]
+[14:13:48] [Client thread/INFO]: [CHAT] /gamerule /gamerule <rule name> [value]
+[14:13:48] [Client thread/INFO]: [CHAT] /give /give <player> <item> [amount] [data] [dataTag]
+[14:13:48] [Client thread/INFO]: [CHAT] /help /help [page|command name]
+[14:13:48] [Client thread/INFO]: [CHAT] /kick /kick <player> [reason ...]
+[14:13:48] [Client thread/INFO]: [CHAT] ====================== « 2/5 » =======================
+[14:13:51] [Client thread/INFO]: [CHAT] ============= Showing Help (/page <page>): ==============
+[14:13:51] [Client thread/INFO]: [CHAT] /kill /kill [player|entity]
+[14:13:51] [Client thread/INFO]: [CHAT] /list /list
+[14:13:51] [Client thread/INFO]: [CHAT] /locate /locate <feature>
+[14:13:51] [Client thread/INFO]: [CHAT] /me /me <action ...>
+[14:13:51] [Client thread/INFO]: [CHAT] /op /op <player>
+[14:13:51] [Client thread/INFO]: [CHAT] /pagination Helper command for paginations occurring
+[14:13:51] [Client thread/INFO]: [CHAT] /pardon /pardon <name>
+[14:13:51] [Client thread/INFO]: [CHAT] /pardon-ip /pardon-ip <address>
+[14:13:51] [Client thread/INFO]: [CHAT] /particle /particle <name> <x> <y> <z> <xd> <yd> <zd> <speed> [count] [mode] [player] [params]
+[14:13:51] [Client thread/INFO]: [CHAT] /playsound /playsound <sound> <source> <player> [x] [y] [z] [volume] [pitch] [minimumVolume]
+[14:13:51] [Client thread/INFO]: [CHAT] /recipe /recipe <give|take> [player] <name|*>
+[14:13:51] [Client thread/INFO]: [CHAT] /reload /reload
+[14:13:51] [Client thread/INFO]: [CHAT] /replaceitem /replaceitem <entity|block> ...
+[14:13:51] [Client thread/INFO]: [CHAT] /save-all /save-all [flush]
+[14:13:51] [Client thread/INFO]: [CHAT] /save-off /save-off
+[14:13:51] [Client thread/INFO]: [CHAT] /save-on /save-on
+[14:13:51] [Client thread/INFO]: [CHAT] ====================== « 3/5 » =======================
+[14:13:55] [Client thread/INFO]: [CHAT] ============= Showing Help (/page <page>): ==============
+[14:13:55] [Client thread/INFO]: [CHAT] /say /say <message ...>
+[14:13:55] [Client thread/INFO]: [CHAT] /scoreboard /scoreboard <objectives|players|teams> ...
+[14:13:55] [Client thread/INFO]: [CHAT] /seed /seed
+[14:13:55] [Client thread/INFO]: [CHAT] /setblock /setblock <x> <y> <z> <block> [dataValue|state] [oldBlockHandling] [dataTag]
+[14:13:55] [Client thread/INFO]: [CHAT] /setidletimeout /setidletimeout <minutes>
+[14:13:55] [Client thread/INFO]: [CHAT] /setworldspawn /setworldspawn [<x> <y> <z>]
+[14:13:55] [Client thread/INFO]: [CHAT] /spawnpoint /spawnpoint [player] [<x> <y> <z>]
+[14:13:55] [Client thread/INFO]: [CHAT] /sponge General Sponge command
+[14:13:55] [Client thread/INFO]: [CHAT] /spreadplayers /spreadplayers <x> <z> <spreadDistance> <maxRange> <respectTeams true|false> <player ...>
+[14:13:55] [Client thread/INFO]: [CHAT] /stats /stats <entity|block> ...
+[14:13:55] [Client thread/INFO]: [CHAT] /stop /stop
+[14:13:55] [Client thread/INFO]: [CHAT] /stopsound /stopsound <player> [source] [sound]
+[14:13:55] [Client thread/INFO]: [CHAT] /summon /summon <entityname> [x] [y] [z] [dataTag]
+[14:13:55] [Client thread/INFO]: [CHAT] /teleport /teleport <entity> <x> <y> <z> [<y-rot> <x-rot>]
+[14:13:55] [Client thread/INFO]: [CHAT] /tell /tell <player> <private message ...>
+[14:13:55] [Client thread/INFO]: [CHAT] /tellraw /tellraw <player> <raw json message>
+[14:13:55] [Client thread/INFO]: [CHAT] ====================== « 4/5 » =======================
+[14:13:57] [Client thread/INFO]: [CHAT] ============= Showing Help (/page <page>): ==============
+[14:13:57] [Client thread/INFO]: [CHAT] 
+[14:13:57] [Client thread/INFO]: [CHAT] 
+[14:13:57] [Client thread/INFO]: [CHAT] /testfor /testfor <player> [dataTag]
+[14:13:57] [Client thread/INFO]: [CHAT] /testforblock /testforblock <x> <y> <z> <block> [dataValue|-1|state|*] [dataTag]
+[14:13:57] [Client thread/INFO]: [CHAT] /testforblocks /testforblocks <x1> <y1> <z1> <x2> <y2> <z2> <x> <y> <z> [mode]
+[14:13:57] [Client thread/INFO]: [CHAT] /time /time <set|add|query> <value>
+[14:13:57] [Client thread/INFO]: [CHAT] /title /title <player> title|subtitle|actionbar|clear|reset|times ...
+[14:13:57] [Client thread/INFO]: [CHAT] /toggledownfall /toggledownfall
+[14:13:57] [Client thread/INFO]: [CHAT] /tp /tp [target player] <destination player> OR /tp [target player] <x> <y> <z> [<yaw> <pitch>]
+[14:13:57] [Client thread/INFO]: [CHAT] /trigger /trigger <objective> <add|set> <value>
+[14:13:57] [Client thread/INFO]: [CHAT] /weather /weather <clear|rain|thunder> [duration in seconds]
+[14:13:57] [Client thread/INFO]: [CHAT] /whitelist /whitelist <on|off|list|add|remove|reload>
+[14:13:57] [Client thread/INFO]: [CHAT] /worldborder /worldborder <set|center|damage|warning|get|add> ...
+[14:13:57] [Client thread/INFO]: [CHAT] /xp /xp <amount> [player] OR /xp <amount>L [player]
+[14:13:57] [Client thread/INFO]: [CHAT] ====================== « 5/5 » =======================
+[14:13:58] [Client thread/INFO]: [CHAT] Page 6 is greater than the max of 5!
+[14:13:59] [Client thread/INFO]: [CHAT] You are currently connected to main.
+[14:13:59] [Client thread/INFO]: [CHAT] You may connect to the following servers at this time: test, main
+[14:18:21] [Client thread/INFO]: [CHAT] Not enough arguments!
+[14:18:21] [Client thread/INFO]: [CHAT] Usage: /sponge which|mods|audit|plugins|timings|metrics|heap|version|<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] chunks|tps|<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] reload|save|config
+[14:18:24] [Client thread/INFO]: [CHAT] ===================== Mods (11) ======================
+[14:18:24] [Client thread/INFO]: [CHAT]  - Minecraft
+[14:18:24] [Client thread/INFO]: [CHAT]  - Minecraft Coder Pack
+[14:18:24] [Client thread/INFO]: [CHAT]  - Forge Mod Loader
+[14:18:24] [Client thread/INFO]: [CHAT]  - Minecraft Forge
+[14:18:24] [Client thread/INFO]: [CHAT]  - SpongeAPI
+[14:18:24] [Client thread/INFO]: [CHAT]  - Sponge
+[14:18:24] [Client thread/INFO]: [CHAT]  - Baubles
+[14:18:24] [Client thread/INFO]: [CHAT]  - Botania
+[14:18:24] [Client thread/INFO]: [CHAT]  - Just Enough Items
+[14:18:24] [Client thread/INFO]: [CHAT]  - SpongeForge
+[14:18:24] [Client thread/INFO]: [CHAT]  - Waila
+[14:18:24] [Client thread/INFO]: [CHAT] ======================== « » =========================
+[14:18:27] [Client thread/INFO]: [CHAT] ===================== Plugins (4) =====================
+[14:18:27] [Client thread/INFO]: [CHAT]  - Minecraft
+[14:18:27] [Client thread/INFO]: [CHAT]  - Minecraft Coder Pack
+[14:18:27] [Client thread/INFO]: [CHAT]  - SpongeAPI
+[14:18:27] [Client thread/INFO]: [CHAT]  - Sponge
+[14:18:27] [Client thread/INFO]: [CHAT] ======================== « » =========================
+[14:18:31] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:18:34] [Client thread/INFO]: [CHAT] At least one target flag must be specified
+[14:18:38] [Client thread/INFO]: [CHAT] Unknown short flag f specified\nreload -f\n       ^
+[14:18:38] [Client thread/INFO]: [CHAT] Usage: /sponge which|mods|audit|plugins|timings|metrics|heap|version|<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] chunks|tps|<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] reload|save|config
+[14:18:49] [Client thread/INFO]: [CHAT] Sending reload event to all plugins. Please wait.
+[14:18:49] [Client thread/INFO]: [CHAT] Reload complete!
+[14:18:52] [Client thread/INFO]: [CHAT] ===================== Plugins (4) =====================
+[14:18:52] [Client thread/INFO]: [CHAT]  - Minecraft
+[14:18:52] [Client thread/INFO]: [CHAT]  - Minecraft Coder Pack
+[14:18:52] [Client thread/INFO]: [CHAT]  - SpongeAPI
+[14:18:52] [Client thread/INFO]: [CHAT]  - Sponge
+[14:18:52] [Client thread/INFO]: [CHAT] ======================== « » =========================
+[14:18:58] [Client thread/INFO]: [CHAT] ===================== Mods (11) ======================
+[14:18:58] [Client thread/INFO]: [CHAT]  - Minecraft
+[14:18:58] [Client thread/INFO]: [CHAT]  - Minecraft Coder Pack
+[14:18:58] [Client thread/INFO]: [CHAT]  - Forge Mod Loader
+[14:18:58] [Client thread/INFO]: [CHAT]  - Minecraft Forge
+[14:18:58] [Client thread/INFO]: [CHAT]  - SpongeAPI
+[14:18:58] [Client thread/INFO]: [CHAT]  - Sponge
+[14:18:58] [Client thread/INFO]: [CHAT]  - Baubles
+[14:18:58] [Client thread/INFO]: [CHAT]  - Botania
+[14:18:58] [Client thread/INFO]: [CHAT]  - Just Enough Items
+[14:18:58] [Client thread/INFO]: [CHAT]  - SpongeForge
+[14:18:58] [Client thread/INFO]: [CHAT]  - Waila
+[14:18:58] [Client thread/INFO]: [CHAT] ======================== « » =========================
+[14:18:59] [Client thread/INFO]: [CHAT] Input command mods was not a valid subcommand!\nmods reload\n^
+[14:18:59] [Client thread/INFO]: [CHAT] Usage: /sponge which|mods|audit|plugins|timings|metrics|heap|version|<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] chunks|tps|<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] reload|save|config
+[14:19:04] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:19:06] [Client thread/INFO]: Applying holder lookups
+[14:19:06] [Client thread/INFO]: Holder lookups applied
+[14:19:07] [Netty Client IO #11/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:19:15] [Netty Client IO #12/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:19:39] [Netty Client IO #13/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:19:40] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:19:41] [Netty Client IO #14/INFO]: Unexpected packet during modded negotiation - assuming vanilla or keepalives : net.minecraft.network.play.server.SPacketDisconnect
+[14:20:13] [Netty Client IO #15/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:20:14] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:20:14] [Netty Client IO #0/INFO]: Unexpected packet during modded negotiation - assuming vanilla or keepalives : net.minecraft.network.play.server.SPacketDisconnect
+[14:21:27] [Netty Client IO #1/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:21:45] [Netty Client IO #2/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:21:46] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:21:47] [Netty Client IO #3/INFO]: Server protocol version 2
+[14:21:47] [Netty Client IO #3/INFO]: Attempting connection with missing mods [custommainmenu, resourceloader] at SERVER
+[14:21:47] [Client thread/INFO]: Injecting existing registry data into this client instance
+[14:21:47] [Client thread/INFO]: Applying holder lookups
+[14:21:47] [Client thread/INFO]: Holder lookups applied
+[14:21:47] [Netty Client IO #3/INFO]: [Netty Client IO #3] Client side modded connection established
+[14:21:48] [Netty Client IO #3/INFO]: Received server authentication msg. Remote sync will be activated
+[14:21:48] [Client thread/INFO]: [CHAT] Welcome IAmRedi to the server!
+[14:21:48] [Client thread/INFO]: [CHAT] IAmRedi joined the game
+[14:21:54] [Client thread/INFO]: [CHAT] Input command plugins was not a valid subcommand!\nplugins\n^
+[14:21:54] [Client thread/INFO]: [CHAT] Usage: /sponge |<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] |<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] 
+[14:21:57] [Client thread/INFO]: [CHAT] Input command plugin was not a valid subcommand!\nplugin\n^
+[14:21:57] [Client thread/INFO]: [CHAT] Usage: /sponge |<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] |<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] 
+[14:22:03] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:22:04] [Client thread/INFO]: [CHAT] You do not have permission to use this command!
+[14:22:18] [Client thread/INFO]: [CHAT] [Server: Opped IAmRedi]
+[14:23:41] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:23:42] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:23:43] [Client thread/INFO]: [CHAT] Not enough arguments!
+[14:23:43] [Client thread/INFO]: [CHAT] Usage: /sponge |<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] |<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] 
+[14:23:45] [Client thread/INFO]: [CHAT] Input command plugins was not a valid subcommand!\nplugins\n^
+[14:23:45] [Client thread/INFO]: [CHAT] Usage: /sponge |<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] |<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] 
+[14:23:49] [Client thread/INFO]: [CHAT] Input command mods was not a valid subcommand!\nmods\n^
+[14:23:49] [Client thread/INFO]: [CHAT] Usage: /sponge |<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] |<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] 
+[14:23:50] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:23:52] [Client thread/INFO]: [CHAT] You do not have permission to use this command!
+[14:23:53] [Client thread/INFO]: [CHAT] You do not have permission to use this command
+[14:26:27] [Client thread/INFO]: [CHAT] [LP] LOG > (Console) [U] (iamredi)\n[LP] LOG > promote owner
+[14:26:28] [Client thread/INFO]: [CHAT] [LP] LOG > (Console) [U] (iamredi)\n[LP] LOG > promote owner
+[14:26:43] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:26:45] [Client thread/INFO]: [CHAT] Not enough arguments!
+[14:26:45] [Client thread/INFO]: [CHAT] Usage: /sponge which|mods|audit|plugins|timings|metrics|heap|version|<>|[--global|-g] [--world|-w <world>] [--dimension|-d <dimension>] chunks|tps|<>|[--global|-g] [--world|-w <world>] [--tracker|-t] [--dimension|-d <dimension>] reload|save|config
+[14:26:48] [Client thread/INFO]: [CHAT] ===================== Plugins (8) =====================
+[14:26:48] [Client thread/INFO]: [CHAT]  - Minecraft
+[14:26:48] [Client thread/INFO]: [CHAT]  - Minecraft Coder Pack
+[14:26:48] [Client thread/INFO]: [CHAT]  - SpongeAPI
+[14:26:48] [Client thread/INFO]: [CHAT]  - Sponge
+[14:26:48] [Client thread/INFO]: [CHAT]  - LuckPerms
+[14:26:48] [Client thread/INFO]: [CHAT]  - MaintenanceSponge
+[14:26:48] [Client thread/INFO]: [CHAT]  - Nucleus
+[14:26:48] [Client thread/INFO]: [CHAT]  - ServerListPlus
+[14:26:48] [Client thread/INFO]: [CHAT] ======================== « » =========================
+[14:26:53] [Client thread/INFO]: [CHAT] Exception from /ban\nNot enough arguments!\n\nUsage: /ban <user uuid>|<user>|<name> [<reason…>]
+[14:26:54] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[14:26:57] [Client thread/INFO]: [CHAT] ------------------------ MOTD ------------------------
+[14:26:57] [Client thread/INFO]: [CHAT] Welcome to the server!
+[14:26:57] [Client thread/INFO]: [CHAT] ------------------------ « » -------------------------
+[14:27:09] [Client thread/INFO]: Applying holder lookups
+[14:27:09] [Client thread/INFO]: Holder lookups applied
+[14:27:11] [Netty Client IO #5/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:27:12] [Client thread/INFO]: Connecting to play.veloxnetwork.ml, 25565
+[14:27:13] [Netty Client IO #6/INFO]: Server protocol version 2
+[14:27:13] [Netty Client IO #6/INFO]: Attempting connection with missing mods [custommainmenu, resourceloader] at SERVER
+[14:27:13] [Client thread/INFO]: Injecting existing registry data into this client instance
+[14:27:13] [Client thread/INFO]: Applying holder lookups
+[14:27:13] [Client thread/INFO]: Holder lookups applied
+[14:27:13] [Netty Client IO #6/INFO]: [Netty Client IO #6] Client side modded connection established
+[14:27:14] [Netty Client IO #6/INFO]: Received server authentication msg. Remote sync will be activated
+[14:27:14] [Client thread/INFO]: [CHAT] ---------------------- WARNING -----------------------
+[14:27:14] [Client thread/INFO]: [CHAT] Your player has the `nucleus` or `*` permission set. This is not recommended. Side effects may include not being able to go AFK and being vanished on login.
+[14:27:14] [Client thread/INFO]: [CHAT] We recommend using our `nucleus setupperms` command to setup your permissions instead.
+[14:27:14] [Client thread/INFO]: [CHAT] Click here or visit the Nucleus ore site for an explanation for why the wildcard is bad.
+[14:27:14] [Client thread/INFO]: [CHAT] (This message may also be disabled using the config, disable "core.check-for-wildcard")
+[14:27:14] [Client thread/INFO]: [CHAT] ------------------------ « » -------------------------
+[14:27:14] [Client thread/INFO]: [CHAT] IAmRedi joined the game
+[14:27:14] [Client thread/INFO]: [CHAT] ------------------------ MOTD ------------------------
+[14:27:14] [Client thread/INFO]: [CHAT] Welcome to the server!
+[14:27:14] [Client thread/INFO]: [CHAT] ------------------------ « » -------------------------
+[14:27:26] [Client thread/INFO]: Loaded 7 advancements
+[14:28:03] [Client thread/INFO]: Applying holder lookups
+[14:28:03] [Client thread/INFO]: Holder lookups applied
+[14:28:03] [Netty Client IO #7/INFO]: Attempting connection with missing mods [minecraft, mcp, FML, forge, baubles, botania, custommainmenu, waila, jei, resourceloader] at SERVER
+[14:28:06] [Client thread/INFO]: Stopping!
+[14:28:06] [Client thread/INFO]: SoundSystem shutting down...
+[14:28:07] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

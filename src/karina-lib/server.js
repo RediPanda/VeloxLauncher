@@ -12,6 +12,7 @@ const authenticator = async () => {
    // DOM Elements.
    const PFP = document.getElementById("accountPfp")
    const text = document.getElementById("accountName")
+   
    atsume.logger(`INFO`, "[Session Manager @ fs]: Grabbing authentication packets...")
 
    let inputEmail;
@@ -95,6 +96,12 @@ const authenticator = async () => {
       }), function (err, results) {
          // console.log(err + '  ' + results) 
       });
+
+      flashAuthIndicator("Failed to validate credentials.", "fa-check", false);
+
+      PFP.src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
+      text.innerHTML = `Not logged in.`
+
    } else if (obj.accessToken) {
       atsume.logger(`API`, `[Session Manager @ Authentication]: Successfully authenticated user @${inputEmail}`)
       // text.innerHTML = 'Successfully validated your session!';
@@ -108,8 +115,10 @@ const authenticator = async () => {
          // console.log(err + '  ' + results)
       });
 
-      // PFP.src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
-      // text.innerHTML = `${obj.selectedProfile.name}`
+      flashAuthIndicator("Authenticated!", "fa-check", false);
+
+      PFP.src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
+      text.innerHTML = `${obj.selectedProfile.name}`
    } else {
       // return text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
    }
