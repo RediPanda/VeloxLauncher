@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top justify-content-end p-0">
+    <nav id="page-titlebar" class="navbar fixed-top justify-content-end p-0">
         <div class="title-controls-dragarea">&nbsp</div>
         <div class="nav-item nav-link btn btn-sm btn-titlebar py-1" id="minimise-button" type="button"
             aria-label="Minimize" role="button" href="#">
@@ -29,32 +29,27 @@
             <i class="fas fa-times fa-lg"></i>
         </div>
     </nav>
-    <div class="row titlebar-offset">
-        <div class="col-auto">
 
-        </div>
-        <div class="col">
-
-        </div>
+    <section id="page-userbar" class="row justify-content-end titlebar-offset">
         <div class="col-auto">
             <div class="card bg-transparent m-3 border-0" id="accountPanel" role="alert" aria-live="assertive"
                 aria-atomic="true">
-                <button id="accountName" class="btn p-2 dropdown text-white">
-                    <img id="accountPfp" class="mr-2 py-0"
+                <button  class="btn p-2 dropdown text-white">
+                    <img id="account-img" class="mr-2 py-0"
                         src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
                         alt="dbmrawdata" width="32" height="32" style="border-radius: .25rem;">
-                    MCUsernameBuffer
+                    <span id="account-name">User</span>
                 </button>
                 <hr class="m-0">
-                <button id="auth-indicator" class="btn btn-sm py-2 bg-none border-top-0">
+                <button id="auth-indicator" class="btn btn-sm py-2 bg-none">
                     <span id="auth-indicator-text" class=''>Logging In</span>
                     <span id="auth-indicator-icon" class="fas fa-circle-notch spinning"></span>
                 </button>
             </div>
         </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col"></div>
+    </section>
+
+    <section id="page-index" class="row justify-content-center">
         <div class="col-6 col-xl-4">
             <img class="hero-img" src="assets/img/minecraft-logo.png">
             <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
@@ -62,24 +57,7 @@
             <button class="btn btn-primary" id="playBtn2">Play Velox Reloaded</button>
             <button class="btn btn-primary" id="update-btn">Update Test</button>
         </div>
-        <div class="col"></div>
-    </div>
-
-    </div>
-    <div class="header-blue d-none">
-        <div class="container hero">
-            <div class="row">
-                <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
-                    <h1 style="padding-top: -24px;padding-bottom: 20px;">Retrieving database data...</h1>
-                    <p>Please wait as we're establishing a handshake to the Velox Services...</p><button
-                        class="btn btn-light btn-lg action-button" type="button">Learn More</button>
-                </div>
-                <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
-                    <div class="iphone-mockup"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <section id="download-bar" class="bg-transparent p-3 hidden">
         <div class="row align-items-center">
@@ -111,38 +89,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-
-    <script>
-        function $$(selector) {
-            return document.querySelector(selector);
-        }
-
-        $$("#update-btn").onclick = () => $$("#download-bar").classList.toggle(
-            "hidden");
-
-        function flashAuthIndicator(text, icon, iconSpinning) {
-            const btn = $$("#auth-indicator");
-
-            $$("#auth-indicator-icon svg").classList.remove("*");
-
-            $$("#auth-indicator-icon svg").classList.add(icon)
-            $$("#auth-indicator-icon svg").classList.add("svg-inline--fa")
-            $$("#auth-indicator-icon svg").classList.add("fa-w-16");
-
-            if(iconSpinning === true) {
-                $$("#auth-indicator-icon").classList.add("spinning");
-            } else {
-                $$("#auth-indicator-icon").classList.remove("spinning");
-            }
-
-            $$("#auth-indicator-text").innerHTML = text;
-            btn.classList.add("flash");
-            setTimeout(() => btn.classList.remove("flash"), 200)
-        }
-        
-        $$("#auth-indicator").onclick = () => flashAuthIndicator("Success", "fa-check", false);
-    </script>
-
+       
     <!-- Insert this line after script imports -->
     <script>
         if (window.module) module = window.module;

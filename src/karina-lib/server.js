@@ -1,17 +1,16 @@
 // External libraries
-const fetch = require('node-fetch');
-const fs = require('fs');
-const moment = require('moment');
+const fetch = require('node-fetch'),
+   fs = require('fs'),
+   moment = require('moment');
 
 // Internal libraries
-const atsume = require('./atsumeLib.js');
-const runtime = require('./runtime.js');
-const cypher = require('./encrypt.js');
+const atsume = require('./atsumeLib.js'),
+   runtime = require('./runtime.js'),
+   cypher = require('./encrypt.js'),
+   f = require("../frontEndHandler");
 
 const authenticator = async () => {
    // DOM Elements.
-   const PFP = document.getElementById("accountPfp")
-   const text = document.getElementById("accountName")
    atsume.logger(`INFO`, "[Session Manager @ fs]: Grabbing authentication packets...")
 
    let inputEmail;
@@ -85,7 +84,6 @@ const authenticator = async () => {
 
    if (obj.error === "ForbiddenOperationException") {
       atsume.logger(`API`, `[Session Manager @ Authentication]: Failed to authenticate user @${inputEmail}`)
-      // text.innerHTML = 'Failed to authenticate your login credentials!';
       fs.writeFile(`${process.env.APPDATA}/devpanda/client/session.json`, JSON.stringify({
          token: 'invalid',
          uuid: obj.selectedProfile.id,
@@ -95,6 +93,8 @@ const authenticator = async () => {
       }), function (err, results) {
          // console.log(err + '  ' + results) 
       });
+
+      f.flashAuthIndicator("Login Failed", "fa-time", false)
    } else if (obj.accessToken) {
       atsume.logger(`API`, `[Session Manager @ Authentication]: Successfully authenticated user @${inputEmail}`)
       // text.innerHTML = 'Successfully validated your session!';
@@ -108,10 +108,11 @@ const authenticator = async () => {
          // console.log(err + '  ' + results)
       });
 
-      // PFP.src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
-      // text.innerHTML = `${obj.selectedProfile.name}`
+      f.$('#account-img').src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
+      f.$('#account-name').innerHTML = `${obj.selectedProfile.name}`
+      f.flashAuthIndicator("Login Successful", "fa-check", false)
    } else {
-      // return text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
+      text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
    }
 
    return obj;

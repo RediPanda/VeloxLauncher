@@ -5,7 +5,7 @@
   "main": "exec.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron . && start npm run dev-sass-watcher",
+    "dev": "start npm run dev-sass-watcher && electron .",
     "dev-sass": "node-sass sass/style.scss -o ./assets/css",
     "dev-sass-watcher": "npm run dev-sass && node-sass ./sass/style.scss -wo ./assets/css/",
     "pack": "electron-builder --dir",
