@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg="nest"></script>
     <script src="src/karina-lib/sessionManager.js"></script>
 </head>
@@ -30,11 +29,60 @@
         </div>
     </nav>
 
+
+    <nav class="l-side-nav">
+        <ul class="side-nav">
+            <li class="is-active"><span>Play</span></li>
+            <li><span>News</span></li>
+            <li><span>Servers</span></li>
+            <li><span>Contact</span></li>
+            <li><span>Settings</span></li>
+        </ul>
+    </nav>
+    <ul class="l-main-content main-content">
+        <li class="l-section section section--is-active">
+            <section id="page-index" class="row page-main justify-content-center">
+                <div class="col-6 col-xl-4">
+                    <img class="hero-img" src="assets/img/minecraft-logo.png">
+                    <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
+                        as a sm0l project.</p>
+                    <button class="btn btn-primary" id="playBtn2">Play Velox Reloaded</button>
+                    <button class="btn btn-primary" id="update-btn">Update Test</button>
+                </div>
+            </section>
+        </li>
+        <li class="l-section section">
+            penis
+        </li>
+        <li class="l-section section">
+            boingis
+        </li>
+        <li class="l-section section">
+            poingis
+        </li>
+        <li class="l-section section">
+            <section id="page-settings" class="row page-main justify-content-center">
+                <div class="col-6 col-xl-4 align-self-center">
+                    <div class="card bg-transparent border-0">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+                </div>
+            </section>
+        </li>
+    </ul>
+
+
     <section id="page-userbar" class="row justify-content-end titlebar-offset">
         <div class="col-auto">
             <div class="card bg-transparent m-3 border-0" id="accountPanel" role="alert" aria-live="assertive"
                 aria-atomic="true">
-                <button  class="btn p-2 dropdown text-white">
+                <button class="btn p-2 dropdown text-white">
                     <img id="account-img" class="mr-2 py-0"
                         src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
                         alt="dbmrawdata" width="32" height="32" style="border-radius: .25rem;">
@@ -46,16 +94,6 @@
                     <span id="auth-indicator-icon" class="fas fa-circle-notch spinning"></span>
                 </button>
             </div>
-        </div>
-    </section>
-
-    <section id="page-index" class="row justify-content-center">
-        <div class="col-6 col-xl-4">
-            <img class="hero-img" src="assets/img/minecraft-logo.png">
-            <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
-                as a sm0l project.</p>
-            <button class="btn btn-primary" id="playBtn2">Play Velox Reloaded</button>
-            <button class="btn btn-primary" id="update-btn">Update Test</button>
         </div>
     </section>
 
@@ -87,9 +125,14 @@
     </script>
 
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
+    </script>
+    <script src="assets/js/functions.js"></script>
+
     <!-- Insert this line after script imports -->
     <script>
         if (window.module) module = window.module;
