@@ -1,128 +1,165 @@
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "main";
 
 body {
-    background-image: url("../img/thumb-1920-609408.png");
-    background-color: rgb(44, 47, 51);
-    background-size: cover;
-    overflow-x: hidden;
+  background-image: url("../img/thumb-1920-609408.png");
+  background-color: rgb(44, 47, 51);
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.bg- {
+  &transparent {
+    background: rgba(0, 0, 0, 0.06) !important
+  }
+  
+  &transparent-dark {
+    background: rgba(0, 0, 0, 0.25) !important
   }
 
-  .bg- {
-        &transparent {
-        background: rgba(0, 0, 0, 0.06) !important
-      };
-      
-      &transparent-dark {
-        background: rgba(0, 0, 0, 0.25) !important
-      };
-      
-      &none {
-        background: rgba(0,0,0,0) !important;
-      };
+  &none {
+    background: rgba(0, 0, 0, 0) !important;
   }
+}
 
-  
-  
-  .titlebar-offset {
+.page- {
+  &main {
+    height: calc(100vh - 31px);
+    //width: calc(100vw - 100px);
     margin-top: 31px;
+    //margin-left: 100px;
   }
-  
-  .title-controls-dragarea {
-    -webkit-app-region: drag;
-    flex-grow: 1;
-    height: 100%;
-    padding-top: 4px;
-  }
-  
-  .navbar {
-    z-index: 50000;
-    background: rgba(0, 0, 0, 0.06);
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-  
-  .btn-titlebar {
-      color: #ffffff;
-      &:hover {
-        color: #ffffff;
-        background: rgba(0, 0, 0, 0.05);
-      }
-      &-close {
-        color: #ffffff;
-        border-radius: 0px;
-        &:hover {
-            color: #dc3545;
-            background: rgba(0, 0, 0, 0.05);
-        }
-      }
+}
 
-      &:focus, &-close:focus {
-        box-shadow: 0 0 0 0;
-    }
-  }
-  
-  .hero-img {
-    max-width:100%;
-    max-height:100%;
-  }
-  
-  #download-bar {
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity 0.2s linear;
-  } 
-  
-  .hidden {
-    visibility: hidden !important;
-    opacity: 0 !important;
-  }
-  
-  .animate-bottom {
-    position: relative;
-    transition: linear;
-    animation: animatebottom 0.4s;
-  }
-  
-  #auth-indicator {
+.titlebar-offset {
+  margin-top: 31px;
+}
+
+.title-controls-dragarea {
+  -webkit-app-region: drag;
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 4px;
+}
+
+.navbar {
+  z-index: 50000;
+  background: rgba(0, 0, 0, 0.06);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn-titlebar {
+  color: #ffffff;
+
+  &:hover {
     color: #ffffff;
-    cursor:default !important;
-    border-radius: 0px 0px .25rem .25rem;
-    &:focus {
-        box-shadow: 0 0 0 0;
-    };
-    &.flash {
-        border: 1px solid #ffffff;
-        transition: border 0.15s linear;
-    };
-    &.icon {
-        transition: all 1s linear;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &-close {
+    color: #ffffff;
+    border-radius: 0px;
+
+    &:hover {
+      color: #dc3545;
+      background: rgba(0, 0, 0, 0.05);
     }
   }
 
-  .spinning svg {
-    -webkit-animation:spin 2s linear infinite;
-    -moz-animation:spin 2s linear infinite;
-    animation:spin 2s linear infinite;
+  &:focus,
+  &-close:focus {
+    box-shadow: 0 0 0 0;
   }
-  
-  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg)}};
+}
 
-  @keyframes animatebottom {
-    from {
-      bottom: -100vh;
-      opacity: 0;
-    }
-  
-    to {
-      bottom: 0;
-      opacity: 1;
-    }
+.hero-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#download-bar {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
+.hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.animate-bottom {
+  position: relative;
+  transition: linear;
+  animation: animatebottom 0.4s;
+}
+
+#auth-indicator {
+  color: #ffffff;
+  cursor: default !important;
+  border-radius: 0px 0px .25rem .25rem;
+
+  &:focus {
+    box-shadow: 0 0 0 0;
   }
+
+  ;
+
+  &.flash {
+    border: 1px solid #ffffff;
+    transition: border 0.15s linear;
+  }
+
+  ;
+
+  &.icon {
+    transition: all 1s linear;
+  }
+}
+
+.spinning svg {
+  -webkit-animation: spin 2s linear infinite;
+  -moz-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
+;
+
+@keyframes animatebottom {
+  from {
+    bottom: -100vh;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
