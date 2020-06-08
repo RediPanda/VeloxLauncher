@@ -130,7 +130,9 @@ const runApplication = (arguments) => {
     const {
         exec
     } = require('child_process');
-    const {remote} = require('electron');
+    const {
+        remote
+    } = require('electron');
 
     // Load the DOM Elements.
     const playBtn = document.getElementById('playBtn2')
@@ -143,8 +145,12 @@ const runApplication = (arguments) => {
     updateBtn.innerHTML = 'Not available to update!';
 
     let window = remote.BrowserWindow.getFocusedWindow();
-    window.minimize();
-    
+    try {
+        window.minimize();
+    } catch (err) {
+        console.log(err);
+    }
+
     const instance = exec(arguments, function (error, stdout, stderr) {
         if (error) {
             atsume.logger('ERROR', error.stack);
@@ -165,7 +171,11 @@ const runApplication = (arguments) => {
         updateBtn.innerHTML = 'Update Test';
 
         // Electron stuff
-        window.focus();
+        try {
+            window.focus();
+        } catch (err) {
+            console.log(err)
+        }
     });
 }
 

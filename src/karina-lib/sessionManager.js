@@ -6,12 +6,13 @@ const Gamedig = require('gamedig');
 const extract = require('extract-zip');
 const mysql = require('mysql2');
 const moment = require('moment');
+const got = require('got');
 
 // Internal libraries
 const atsume = require('./src/karina-lib/atsumeLib.js');
 const runtime = require('./src/karina-lib/runtime.js');
 const mojang = require('./src/karina-lib/server.js')
-const f = require('./src/frontEndHandler.js');
+const f = require('./src/karina-lib/frontEndHandler.js');
 
 // Internal variables.
 const localfileVersion = 'v1.0.2';
@@ -91,6 +92,26 @@ async function serverQuery(debug) {
 
 };
 
+async function checkLoginSession() {
+    setTimeout(function loginCallback() {
+        const accountUsername = document.getElementById('account-name')
+        const accountStatus = document.getElementById('auth-indicator-text')
+        const accountIcon = document.getElementById('auth-indicator-icon')
+        console.log('i ran, iran!')
+        if (accountUsername.innerHTML == "User") {
+            // It means that Mojang didn't authenticate them in time.
+
+            accountUsername.innerHTML = "Not logged in!";
+            accountIcon.classList.add("hidden");
+            accountStatus.innerHTML = `<a id="login-btn" class="btn btn-primary" href="#" role="button">Log in</a>`;
+        }
+
+        document.getElementById("login-btn").addEventListener("click", () => {
+            window.prompt("sometext","defaultText");
+        });
+    }, 2000);
+}
+
 // On page load/app load, perform setup checks.
 document.addEventListener('DOMContentLoaded', async function () {
     const services = require('./src/karina-lib/update.js');
@@ -104,4 +125,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     attemptUpdate();
     f.titleBarListeners();
     f.buttonListeners();
+
+    checkLoginSession()
 });

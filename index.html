@@ -97,21 +97,46 @@
         </div>
     </section>
 
+<<<<<<< HEAD
     <section id="download-bar" class="bg-transparent p-3 hidden">
+=======
+    <section id="page-index" class="row justify-content-center">
+        <div class="col-6 col-xl-4">
+            <img class="hero-img" src="assets/img/minecraft-logo.png">
+            <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
+                as a sm0l project.</p>
+            <button class="btn btn-primary" id="playBtn2">Play Velox Reloaded</button>
+            <button class="btn btn-primary" id="update-btn">Update Test</button>
+        </div>
+    </section>
+
+    <section id="download-bar" class="bg-transparent px-3 pb-3 pt-2 hidden">
+        <div id="download-infotext" class="text-white d-flex">
+            <div class="col-auto p-0">
+                <span id="download-progresstext" class='text-left'>
+                    Doing some stuff n shit i dontknow
+                </span>
+                </div> <div class="col">
+            </div>
+            <div class="col-auto p-0">
+                <strong>
+                    <span id="download-progress-percent">20</span>
+                </strong>
+                <!-- (<span id="download-progress-time">01:02:03</span> left)</div> -->
+            </div>
+        </div>
+>>>>>>> 25f43762e5ef84e48d83bdf7d02ee2feb8e5ef5c
         <div class="row align-items-center">
             <div class="col flex-grow-1">
-                <div class="progress bg-transparent-dark progress-download">
-                    <div class="progress-bar bg-white scanning" role="progressbar" style="width: 75%" aria-valuenow="50"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress bg-transparent-dark">
+                    <div id="download-progress-bar" class="progress-bar bg-white scanning" role="progressbar"
+                        style="width: 75%; transition: width 0.05s !important" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    </div>
                 </div>
             </div>
-            <div class="col-auto">
-                <div id="download-spinner" class="spinner-border text-white" role="status">
+            <div id="download-spinner" class="col-auto">
+                <div class="spinner-border text-white" role="status">
                     <span class="sr-only">Loading...</span>
-                </div>
-                <div id="download-infotext" class="align-self-center text-center text-white d-none">
-                    <strong><span id="download-progress-percent">20</span>%</strong>
-                    (<span id="download-progress-time">01:02:03</span> left)
                 </div>
             </div>
         </div>
@@ -127,11 +152,14 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
     </script>
     <script src="assets/js/functions.js"></script>
+=======
+>>>>>>> 25f43762e5ef84e48d83bdf7d02ee2feb8e5ef5c
 
     <!-- Insert this line after script imports -->
     <script>

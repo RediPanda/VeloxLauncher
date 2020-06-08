@@ -37,7 +37,7 @@ const Setup = async (step) => {
       if (!fs.existsSync(`${process.env.APPDATA}/devpanda/client/profile/memory.json`)) {
          fs.writeFileSync(`${process.env.APPDATA}/devpanda/client/profile/memory.json`, JSON.stringify({
             minimumRAM: '1024',
-            maximumRAM: '2048'
+            maximumRAM: '4048'
          }));
       }
 
