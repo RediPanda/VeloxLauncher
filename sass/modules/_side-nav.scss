@@ -1,0 +1,80 @@
+.side-nav {
+  position: relative;
+  display: flex;
+  width: 800px;
+  height: 50px;
+  max-height: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  z-index: 10;
+  list-style-type: none;
+  vertical-align: middle;
+  text-align: center;
+
+  &>* {
+    user-select: none;
+  }
+
+  &>li {
+    position: relative;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer; align-self: auto;
+    width: calc(100% / 5);
+  }
+
+  span {
+    color: $white;
+    font-size: 14px;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px #000;
+  }
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  li.is-active {
+    color: $highlight;
+    transition: color .2s ease-in-out;
+
+    span {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .2s ease-in-out;
+      transition: all 0.05s ease-in-out;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+
+// li:nth-child(1)::before {
+  //   content: "01";
+  // }
+
+  // li:nth-child(2)::before {
+  //   content: "02";
+  // }
+
+  // li:nth-child(3)::before {
+  //   content: "03";
+  // }
+
+  // li:nth-child(4)::before {
+  //   content: "04";
+  // }
+
+  // li:nth-child(5)::before {
+  //   content: "05";
+  // }
