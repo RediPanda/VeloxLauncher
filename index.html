@@ -30,6 +30,9 @@
             </div>
         </nav>
 
+        <!-- hidden for now since it appears to do nothing -->
+        <!-- <a id="login-btn" class="btn btn-primary" href="#" role="button">Log in</a> -->
+
         <section id="page-userbar" class="d-flex">
             <div class="flex-grow-1">
                 <div class="card bg-transparent m-3 border-0" id="accountPanel" role="alert" aria-live="assertive"
@@ -38,7 +41,7 @@
                         <img id="account-img" class="mr-2 py-0"
                             src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
                             alt="dbmrawdata" width="32" height="32" style="border-radius: .25rem;">
-                        <span id="account-name">________________</span>
+                        <span class="account-name">________________</span>
                     </button>
                     <hr class="m-0">
                     <button id="auth-indicator" class="btn btn-sm py-2 bg-none">
@@ -86,8 +89,8 @@
                     <li id="page-settings" class="l-section section row page-main justify-content-center">
                         <div class="col-6 col-xl-4 align-self-center">
                             <div class="card bg-transparent border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
+                                <div class="card-body text-white">
+                                    <h5 class="card-title"><span class="account-name">________________</span></h5>
                                     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the
@@ -132,7 +135,7 @@
             </section>
         </div>
     </div>
-    
+
     <script>
         if (typeof module === 'object') {
             window.module = module;
@@ -144,11 +147,13 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <!-- <script src="src/karina-lib/frontEndHandler.js"></script> -->
+
     <script>
         window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
         //document.querySelector("#accountPanel").onclick = () => document.querySelector("#download-bar").classList.toggle("hidden");
     </script>
-    <script src="assets/js/functions.js"></script>
 
     <!-- Insert this line after script imports -->
     <script>

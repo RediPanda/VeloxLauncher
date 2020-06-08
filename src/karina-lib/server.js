@@ -113,7 +113,7 @@ const authenticator = async () => {
       });
 
       f.$('#account-img').src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
-      f.$('#account-name').innerHTML = `${obj.selectedProfile.name}`
+      f.updateAllUsernameDisplays(`${obj.selectedProfile.name}`)
       f.flashAuthIndicator("Login Successful", "fa-check", false)
    } else {
       // text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';

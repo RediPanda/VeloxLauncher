@@ -43,7 +43,7 @@ async function buttonListeners() {
         let latest = getJSON.launcher[2].latestModpackVersion;
 
         async function getSetUpdate() {
-            
+
             // Mod and Game files.
             if (currentVersion != latest) {
                 // let array = getJSON.versions[0]
@@ -282,3 +282,10 @@ function updateLoadBar(boolean, percentage, text) {
     // Set text.
     textbar.innerHTML = text;
 }
+
+function updateAllUsernameDisplays(name) {
+    fields = document.querySelectorAll(".account-name");
+    fields.forEach((e) => e.innerHTML = name);
+}
+
+module.exports.updateAllUsernameDisplays = updateAllUsernameDisplays;
