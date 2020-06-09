@@ -7220,7 +7220,7 @@ a.text-dark:hover, a.text-dark:focus {
     color: #fff;
     font-size: 14px;
     font-weight: 300;
-    text-shadow: 0px 0px 10px #000; }
+    text-shadow: 0px 0px 15px #000; }
   .side-nav::before {
     position: absolute;
     top: 3px;
@@ -7254,6 +7254,17 @@ body {
 
 .bg-none {
   background: rgba(0, 0, 0, 0) !important; }
+
+.form-login.form-control.form-control-sm {
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  border-radius: 0px; }
+  .form-login.form-control.form-control-sm:focus {
+    box-shadow: 0 0 0 0; }
+
+input::placeholder {
+  color: #ddd !important; }
 
 .main-container-wrapper {
   overflow-y: hidden; }

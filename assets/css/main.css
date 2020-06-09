@@ -57,7 +57,7 @@
     color: #fff;
     font-size: 14px;
     font-weight: 300;
-    text-shadow: 0px 0px 10px #000; }
+    text-shadow: 0px 0px 15px #000; }
   .side-nav::before {
     position: absolute;
     top: 3px;

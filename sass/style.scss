@@ -23,6 +23,21 @@ body {
   }
 }
 
+.form-login.form-control.form-control-sm {
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-radius: 0px;
+
+    &:focus {
+      box-shadow: 0 0 0 0;
+  }
+}
+
+input::placeholder {   
+  color: #ddd !important;
+} 
+
 .main-container-wrapper {
   overflow-y: hidden;
 }

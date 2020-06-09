@@ -31,23 +31,38 @@
         </nav>
 
         <!-- hidden for now since it appears to do nothing -->
-        <!-- <a id="login-btn" class="btn btn-primary" href="#" role="button">Log in</a> -->
+        <!--  -->
 
         <section id="page-userbar" class="d-flex">
             <div class="flex-grow-1">
                 <div class="card bg-transparent m-3 border-0" id="accountPanel" role="alert" aria-live="assertive"
                     aria-atomic="true">
-                    <button class="btn p-2 dropdown text-white">
+                    <div class="px-3 p-3 dropdown text-white">
                         <img id="account-img" class="mr-2 py-0"
                             src="https://cdn.discordapp.com/avatars/222954293374746626/785aa138d6eefc93686b2c354bafef08.png?size=2048"
                             alt="dbmrawdata" width="32" height="32" style="border-radius: .25rem;">
-                        <span class="account-name">________________</span>
-                    </button>
-                    <hr class="m-0">
-                    <button id="auth-indicator" class="btn btn-sm py-2 bg-none">
-                        <span id="auth-indicator-text" class=''>Logging In</span>
-                        <span id="auth-indicator-icon" class="fas fa-circle-notch spinning"></span>
-                    </button>
+                        <span class="account-name">Not Logged In</span>
+                    </div>
+                    <div class="form-group row mx-1 mb-1">
+                        <div class="col-12 px-2 mb-2">
+                            <input id="login-password" type="email"
+                                class="form-login form-control form-control-sm bg-none text-white border-white"
+                                placeholder="Mojang Email">
+                        </div>
+                        <div class="col-12 px-2 mb-3">
+                            <input id="login-password" type="password"
+                                class="form-login form-control form-control-sm bg-none text-white border-white"
+                                placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row mx-1 mb-1 mt-2">
+                        <div id="auth-indicator" class="col px-2 mb-2">
+                            <a id="login-btn" class="btn btn-sm btn-block btn-primary" href="#" role="button">
+                                <span id="auth-indicator-text" class=''>Log In</span>
+                                <span id="auth-indicator-icon" class="fas fa-circle-notch spinning d-none"></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -57,7 +72,7 @@
         <div class="vertical-content-wrapper">
             <div class="horizontal-content-wrapper">
                 <ul class="l-main-content main-content">
-                    
+
                     <li class="l-section section">
                         penis
                     </li>
@@ -71,8 +86,14 @@
                             <img class="hero-img" src="assets/img/minecraft-logo.png">
                             <p class="text-white">A custom made Minecraft Mod Launcher for private use as well
                                 as a sm0l project.</p>
-                            <button class="btn btn-primary" id="playBtn2">Play Velox Reloaded</button>
-                            <button class="btn btn-primary" id="update-btn">Update Test</button>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-block btn-primary" id="playBtn2">Play Velox Reloaded</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-block btn-primary" id="update-btn">Update Test</button>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li class="l-section section">
