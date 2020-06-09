@@ -8,8 +8,22 @@
     "dev": "start npm run dev-sass-watcher && electron .",
     "dev-sass": "node-sass sass/style.scss -o ./assets/css",
     "dev-sass-watcher": "npm run dev-sass && node-sass ./sass/style.scss -wo ./assets/css/",
+    "postinstall": "install-app-deps",
     "pack": "electron-builder --dir",
-    "mac": "electron-builder --dir --mac"
+    "dist": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "yourappid",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
   },
   "author": "RediPanda",
   "license": "ISC",
@@ -20,9 +34,6 @@
     "cryptr": "^6.0.2",
     "download": "^8.0.0",
     "download-file": "^0.1.5",
-    "electron": "^8.3.0",
-    "electron-packager": "^14.2.1",
-    "electron-reload": "^1.5.0",
     "fs-extra": "^9.0.1",
     "gamedig": "^2.0.20",
     "got": "^11.3.0",
@@ -31,10 +42,12 @@
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
     "randomatic": "^3.1.1",
-    "swup": "^2.0.9",
-    "v8-compile-cache": "^2.1.0"
+    "swup": "^2.0.10",
+    "v8-compile-cache": "^2.1.1"
   },
   "devDependencies": {
-    "electron-builder": "^22.6.1"
+    "electron": "^8.3.1",
+    "electron-builder": "^22.7.0",
+    "electron-reload": "^1.5.0"
   }
 }
