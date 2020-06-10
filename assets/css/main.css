@@ -31,7 +31,7 @@
 .side-nav {
   position: relative;
   display: flex;
-  width: 800px;
+  width: 550px;
   height: 50px;
   max-height: 50px;
   flex-direction: row;
@@ -52,7 +52,7 @@
     font-weight: 700;
     cursor: pointer;
     align-self: auto;
-    width: calc(100% / 5); }
+    width: calc(100% / 4); }
   .side-nav span {
     color: #fff;
     font-size: 14px;
