@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
       var delta = (e.originalEvent.wheelDelta) ? -e.originalEvent.wheelDelta : e.originalEvent.detail * 20;
 
-      if (delta > 50 && canScroll) {
+      if (delta < -50 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
         scrollController = setTimeout(function(){
@@ -21,7 +21,7 @@ $( document ).ready(function() {
         }, 800);
         updateHelper(1);
       }
-      else if (delta < -50 && canScroll) {
+      else if (delta > 50 && canScroll) {
         canScroll = false;
         clearTimeout(scrollController);
         scrollController = setTimeout(function(){
