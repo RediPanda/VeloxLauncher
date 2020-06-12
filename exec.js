@@ -13,6 +13,8 @@ const ignoredLogs = /logs|[/\\]\./; // all folder resorces => resources
 
 // require('electron-reload')(__dirname, {ignored: [ignoredLogs, ignoredNode] });
  
+app.allowRendererProcessReuse = true;
+
 function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
