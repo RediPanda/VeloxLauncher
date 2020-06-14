@@ -15,7 +15,7 @@ async function buttonListeners() {
         const fsExtra = require('fs-extra')
         const fetch = require('node-fetch');
         const download = require('download');
-        const extract = require('extract-zip');
+        const extract = require('extract-zip-promise');
         const atsume = require('./atsumeLib.js')
 
         // alert('Launching the game. Please wait!')
@@ -111,9 +111,9 @@ async function buttonListeners() {
 
                 // Clear and re-apply mods to the instance folder.
                 try {
-                    fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\instance\\mods`);
-                    fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\assets`);
-                    fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\libraries`);
+                    await fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\instance\\mods`);
+                    await fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\assets`);
+                    await fsExtra.emptyDirSync(`${process.env.APPDATA}\\devpanda\\libraries`);
                 } catch (err) {
                     // Do nothing cause it means there was nothing in the first place.
                 }
@@ -121,34 +121,49 @@ async function buttonListeners() {
                 atsume.logger(`INFO`, `Extracting individual mod packages.`)
                 updateLoadBar(true, '1', `Extracting packet [Patch ${i + 1}]`);
                 for (i = 0; i < array.length; i++) {
-                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`, {
-                        dir: `${process.env.APPDATA}\\devpanda\\instance\\mods`
-                    });
-                    updateLoadBar(true, '100', `Extracting packet [Patch ${i + 1}]`);
+                    try {
+                        await extract(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`, {
+                            dir: `${process.env.APPDATA}\\devpanda\\instance\\mods`
+                        });
+
+                        updateLoadBar(true, '100', `Extracting packet [Patch ${i + 1}]`);
+                    } catch (err) {
+                        atsume.logger(`CATCH ERROR`, err)
+                    }
                 }
 
                 atsume.logger(`INFO`, `Extracting assets.`)
                 updateLoadBar(true, '1', `Extracting packet [assets]`);
                 for (i = 0; i < array.length; i++) {
-                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\assets.zip`, {
-                        dir: `${process.env.APPDATA}\\devpanda\\assets`
-                    });
-                    updateLoadBar(true, '100', `Extracting packet [assets]`);
+                    try {
+                        await extract(`${process.env.APPDATA}\\devpanda\\cache\\assets.zip`, {
+                            dir: `${process.env.APPDATA}\\devpanda\\assets`
+                        });
+                        updateLoadBar(true, '100', `Extracting packet [assets]`);
+
+                    } catch (err) {
+                        atsume.logger(`CATCH ERROR`, err)
+                    }
                 }
 
                 atsume.logger(`INFO`, `Extracting libraries`)
                 updateLoadBar(true, '1', `Extracting packet [libraries]`);
                 for (i = 0; i < array.length; i++) {
-                    await extract(`${process.env.APPDATA}\\devpanda\\cache\\libraries.zip`, {
-                        dir: `${process.env.APPDATA}\\devpanda\\libraries`
-                    });
-                    updateLoadBar(true, '100', `Extracting packet [libraries]`);
+                    try {
+                        await extract(`${process.env.APPDATA}\\devpanda\\cache\\libraries.zip`, {
+                            dir: `${process.env.APPDATA}\\devpanda\\libraries`
+                        });
+                        updateLoadBar(true, '100', `Extracting packet [libraries]`);
+
+                    } catch (err) {
+                        atsume.logger(`CATCH ERROR`, err)
+                    }
                 }
 
                 updateLoadBar(false, '0', 'Done!');
 
                 // And finally, apply patch update to the version medium.
-                fs.writeFileSync(`${process.env.APPDATA}//devpanda//client//profile//modvar.json`, latest);
+                await fs.writeFileSync(`${process.env.APPDATA}//devpanda//client//profile//modvar.json`, latest);
 
             } else {
                 // Continue on.
@@ -162,8 +177,8 @@ async function buttonListeners() {
                 updateLoadBar(false, '0', '.');
                 let args = await runtime.createArguments();
                 runtime.runApplication(args);
-            }, 750)
-        }, 2500)
+            }, 1750)
+        }, 5500)
 
     });
 
@@ -265,7 +280,7 @@ module.exports.updateUserDisplay = updateUserDisplay;
 function updateLoadBar(boolean, percentage, text) {
     const downloadBar = document.getElementById('download-bar');
     const syncbar = document.getElementById('download-progress-bar');
-    const textbar = document.getElementById('download-progresstext')
+    const textbar = document.getElementById('download-progresstext');
 
     // First params (If it's visible.)
     if (boolean == true) {
