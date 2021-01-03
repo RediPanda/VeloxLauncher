@@ -57,7 +57,7 @@ async function buttonListeners() {
                 atsume.logger(`INFO`, `Importing package [Libraries]`);
                 updateLoadBar(true, '0', `Downloading Patch (libraries) from the Resource Manager...`);
                 fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\libraries.zip`,
-                    await download(`http://www.veloxnetwork.ml/files/essentials/v${latest}/libraries.zip`).on('downloadProgress', (callback) => {
+                    await download(`https://velox.nekonii.xyz/files/essentials/v${latest}/libraries.zip`).on('downloadProgress', (callback) => {
                         updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading Patch (libraries) from the Resource Manager...`);
                     }));
                 setTimeout(function finishCallback() {
@@ -68,7 +68,7 @@ async function buttonListeners() {
                 atsume.logger(`INFO`, `Importing package [Assets]`);
                 updateLoadBar(true, '0', `Downloading Patch (assets) from the Resource Manager...`);
                 fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\assets.zip`,
-                    await download(`http://www.veloxnetwork.ml/files/essentials/v${latest}/assets.zip`).on('downloadProgress', (callback) => {
+                    await download(`https://velox.nekonii.xyz/files/essentials/v${latest}/assets.zip`).on('downloadProgress', (callback) => {
                         updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading Patch (assets) from the Resource Manager...`);
                     }));
                 setTimeout(function finishCallback() {
@@ -80,7 +80,7 @@ async function buttonListeners() {
                     atsume.logger(`INFO`, `Importing package ${i + 1}`);
                     updateLoadBar(true, '0', `Downloading Patch ${i + 1} from the Resource Manager...`);
                     fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`,
-                        await download(`http://www.veloxnetwork.ml/files/mods/v${latest}/pack${i + 1}.zip`).on('downloadProgress', (callback) => {
+                        await download(`https://velox.nekonii.xyz/files/mods/v${latest}/pack${i + 1}.zip`).on('downloadProgress', (callback) => {
                             updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading Patch ${i + 1} from the Resource Manager...`);
                         }));
                     setTimeout(function finishCallback() {
@@ -93,7 +93,7 @@ async function buttonListeners() {
                     atsume.logger(`Importing package [MAIN INSTANCE PACKAGE]`);
                     updateLoadBar(true, '0', `Downloading instance.zip from the Resource Manager...`);
                     fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\instance.zip`,
-                        await download(`http://www.veloxnetwork.ml/files/instance/v${latest}/instance.zip`).on('downloadProgress', (callback) => {
+                        await download(`https://velox.nekonii.xyz/files/instance/v${latest}/instance.zip`).on('downloadProgress', (callback) => {
                             updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading instance.zip from the Resource Manager...`);
                         }));
                     setTimeout(function finishCallback() {
