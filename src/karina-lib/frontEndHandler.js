@@ -34,7 +34,7 @@ async function buttonListeners() {
         updateLoadBar(true, '30', 'Acquiring modpack information...');
 
         let getJSON;
-        await fetch('http://www.veloxnetwork.ml/database/db.json')
+        await fetch('https://velox.nekonii.xyz/database/db.json')
             .then(res => res.json())
             .then(json => getJSON = json);
 
