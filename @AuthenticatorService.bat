@@ -1,0 +1,2 @@
+node authenticator.js
+exit

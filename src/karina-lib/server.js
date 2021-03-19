@@ -112,9 +112,12 @@ const authenticator = async () => {
          // console.log(err + '  ' + results)
       });
 
-      f.$('#account-img').src = `https://minotar.net/avatar/${obj.selectedProfile.id}/100.png`;
+      f.$('#account-img').src = `https://crafatar.com/avatars/${obj.selectedProfile.id}`;
       f.updateAllUsernameDisplays(`${obj.selectedProfile.name}`)
       f.flashAuthIndicator("Login Successful", "fa-check", false)
+
+      let panel = document.getElementById('group-acc-form');
+      panel.classList.add('d-none')
    } else {
       // text.innerHTML = 'An internal error has occured. Please restart the application or contact the developer with the appropriate log files.';
    }

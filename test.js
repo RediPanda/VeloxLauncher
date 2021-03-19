@@ -28,4 +28,4 @@ async function test(input) {
    console.log(output2);
 }
 
-test('pass');
+test('stuff');

@@ -40,7 +40,7 @@
                             alt="dbmrawdata" width="32" height="32" style="border-radius: .25rem;">
                         <span class="account-name">Not Logged In</span>
                     </div>
-                    <div class="form-group row mx-1 mb-1">
+                    <div id="group-acc-form" class="form-group row mx-1 mb-1">
                         <div class="col-12 px-2 mb-2">
                             <input id="login-password" type="email"
                                 class="form-login form-control form-control-sm bg-none text-white border-white"
@@ -73,7 +73,7 @@
                             <div class="card bg-transparent border-0">
                                 <div class="card-body text-white">
                                     <h5 class="card-title"><span class="account-name">________________</span></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted">Server Details</h6>
                                     <p class="card-text">Some quick example text to build on the card title and make up
                                         the
                                         bulk of the card's content.</p>
@@ -95,7 +95,7 @@
                                     <button class="btn btn-block btn-primary" id="playBtn2">Play Velox Reloaded</button>
                                 </div>
                                 <div class="col">
-                                    <button class="btn btn-block btn-primary" id="update-btn">Update Test</button>
+                                    <button class="btn btn-block btn-primary" id="update-btn">Check for Updates</button>
                                 </div>
                             </div>
                         </div>
@@ -105,12 +105,32 @@
                             <div class="card bg-transparent border-0">
                                 <div class="card-body text-white">
                                     <h5 class="card-title"><span class="account-name">________________</span></h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
+                                    <h6 class="card-subtitle mb-2 text-muted">Client Settings</h6>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch1"
+                                            checked="">
+                                        <label class="custom-control-label" for="customSwitch1">Automatic login</label>
+                                    </div>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch2"
+                                            checked="">
+                                        <label class="custom-control-label" for="customSwitch2">Check for Updates
+                                            periodically</label>
+                                    </div>
+                                    <br>
+                                    <h6 class="card-subtitle mb-2 text-muted">Game Settings</h6>
+                                    <div class="form-group">
+                                        <label class="control-label">Maximum RAM</label>
+                                        <div class="form-group">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" aria-label="RAMHolder"
+                                                    placeholder="3096">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

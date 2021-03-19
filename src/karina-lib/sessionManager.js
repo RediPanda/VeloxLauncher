@@ -1,9 +1,9 @@
 // External libraries
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 const fs = require('fs');
-const random = require('randomatic');
+// const random = require('randomatic'); [Replaced for PID instead of beulshiet. // Optimisation fix.]
 const Gamedig = require('gamedig');
-const extract = require('extract-zip');
+// const extract = require('extract-zip');
 // const mysql = require('mysql2');
 // const moment = require('moment');
 // const got = require('got');
@@ -23,14 +23,17 @@ const localfileVersion = 'v1.0.2';
 
 
 // Token clearance
-let finalToken = `${random('Aa0', 5)}-${random('Aa0', 5)}-${random('Aa0', 5)}-${random('Aa0', 5)}-${random('Aa0', 5)}`;
-atsume.logger(`INFO`, `Registering program session as (${finalToken})`);
+atsume.logger(`INFO`, `Registering program session under PID (${process.pid})`);
 
 // On page load/app load, authenticate the user using old data.
 async function serviceAuthentication() {
     atsume.logger(`INFO`, `[Session Manager]: Checking Mojang Authentication Servers...`);
     mojang.authenticator();
 };
+
+function debug() {
+    atsume.logger(`DEBUG`, `[Main Process] Running the debug profiler.`)
+}
 
 async function attemptUpdate() {
     // Once the DOM Content load, we shall check for any latest updates.
@@ -92,24 +95,18 @@ async function serverQuery(debug) {
 
 };
 
-async function checkLoginSession() {
-    setTimeout(function loginCallback() {
-        const accountUsername = document.getElementById('account-name')
-        const accountStatus = document.getElementById('auth-indicator-text')
-        const accountIcon = document.getElementById('auth-indicator-icon')
-        console.log('i ran, iran!')
-        if (accountUsername.innerHTML == "User") {
-            // It means that Mojang didn't authenticate them in time.
+async function contentButtonEvent() {
+    const buttonBtn = document.getElementById('login-btn');
+    buttonBtn.addEventListener('click', async function() {
+        const username = document.getElementsByClassName('account-name');
 
-            accountUsername.innerHTML = "Not logged in!";
-            accountIcon.classList.add("hidden");
-            accountStatus.innerHTML = `<a id="login-btn" class="btn btn-primary" href="#" role="button">Log in</a>`;
+        if (username.innerHTML != 'Not Logged In') {
+            // Means the person is logged in.
+            return atsume.logger('INFO', `The login button has been disabled as the account has been verified.`);
+        } else {
+            // return atsume.logger('INFO', `The login button has been disabled as the account has been verified.`);
         }
-
-        document.getElementById("login-btn").addEventListener("click", () => {
-            window.prompt("sometext","defaultText");
-        });
-    }, 2000);
+    });
 }
 
 // On page load/app load, perform setup checks.
@@ -126,5 +123,5 @@ document.addEventListener('DOMContentLoaded', async function () {
     f.titleBarListeners();
     f.buttonListeners();
 
-    checkLoginSession()
+    contentButtonEvent()
 });
