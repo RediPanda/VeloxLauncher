@@ -1122,10 +1122,10 @@ electron-reload@^1.5.0:
   dependencies:
     chokidar "^3.0.2"
 
-electron@^8.3.1:
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-8.4.0.tgz#30692166dc8b2a511b3c01c70960d467efe2b8e6"
-  integrity sha512-SpgyccM5rjDJSGcpQjiviUBT44fZlSyhcjy8RpKSnAad+co4xY1vYj6T25U1CfSk0PH/dhvcp63P2sdXHCwq/Q==
+electron@^9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-9.4.0.tgz#c3c607e3598226ddbaaff8babcdffa8bb2210936"
+  integrity sha512-hOC4q0jkb+UDYZRy8vrZ1IANnq+jznZnbkD62OEo06nU+hIbp2IrwDRBNuSLmQ3cwZMVir0WSIA1qEVK0PkzGA==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
@@ -2666,6 +2666,11 @@ query-string@^5.0.1:
     decode-uri-component "^0.2.0"
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
+
+questions@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/questions/-/questions-0.0.6.tgz#79ed146417680b9c67af025e7c4ab546a9909ed9"
+  integrity sha1-ee0UZBdoC5xnrwJefEq1RqmQntk=
 
 quick-lru@^5.1.1:
   version "5.1.1"
