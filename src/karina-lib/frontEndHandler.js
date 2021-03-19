@@ -32,8 +32,9 @@ async function buttonListeners() {
         }
 
         updateLoadBar(true, '30', 'Acquiring modpack information...');
+
         let getJSON;
-        await fetch('https://assets.nekonii.xyz/minecraft/jurassiccraft/database/db.json')
+        await fetch('https://velox.nekonii.xyz/database/db.json')
             .then(res => res.json())
             .then(json => getJSON = json);
 
@@ -56,7 +57,7 @@ async function buttonListeners() {
                 atsume.logger(`INFO`, `Importing package [Libraries]`);
                 updateLoadBar(true, '0', `Downloading Patch (libraries) from the Resource Manager...`);
                 fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\libraries.zip`,
-                    await download(`https://assets.nekonii.xyz/minecraft/jurassiccraft/files/essentials/v${latest}/libraries.zip`).on('downloadProgress', (callback) => {
+                    await download(`https://velox.nekonii.xyz/files/essentials/v${latest}/libraries.zip`).on('downloadProgress', (callback) => {
                         updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading Patch (libraries) from the Resource Manager...`);
                     }));
                 setTimeout(function finishCallback() {
@@ -67,7 +68,7 @@ async function buttonListeners() {
                 atsume.logger(`INFO`, `Importing package [Assets]`);
                 updateLoadBar(true, '0', `Downloading Patch (assets) from the Resource Manager...`);
                 fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\assets.zip`,
-                    await download(`https://assets.nekonii.xyz/minecraft/jurassiccraft/files/essentials/v${latest}/assets.zip`).on('downloadProgress', (callback) => {
+                    await download(`https://velox.nekonii.xyz/files/essentials/v${latest}/assets.zip`).on('downloadProgress', (callback) => {
                         updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading Patch (assets) from the Resource Manager...`);
                     }));
                 setTimeout(function finishCallback() {
@@ -79,7 +80,7 @@ async function buttonListeners() {
                     atsume.logger(`INFO`, `Importing package ${i + 1}`);
                     updateLoadBar(true, '0', `Downloading Patch ${i + 1} from the Resource Manager...`);
                     fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\pack${i + 1}.zip`,
-                        await download(`https://assets.nekonii.xyz/minecraft/jurassiccraft/files/mods/v${latest}/pack${i + 1}.zip`).on('downloadProgress', (callback) => {
+                        await download(`https://velox.nekonii.xyz/files/mods/v${latest}/pack${i + 1}.zip`).on('downloadProgress', (callback) => {
                             updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading Patch ${i + 1} from the Resource Manager...`);
                         }));
                     setTimeout(function finishCallback() {
@@ -92,7 +93,7 @@ async function buttonListeners() {
                     atsume.logger(`Importing package [MAIN INSTANCE PACKAGE]`);
                     updateLoadBar(true, '0', `Downloading instance.zip from the Resource Manager...`);
                     fs.writeFileSync(`${process.env.APPDATA}\\devpanda\\cache\\instance.zip`,
-                        await download(`https://assets.nekonii.xyz/minecraft/jurassiccraft/files/instance/v${latest}/instance.zip`).on('downloadProgress', (callback) => {
+                        await download(`https://velox.nekonii.xyz/files/instance/v${latest}/instance.zip`).on('downloadProgress', (callback) => {
                             updateLoadBar(true, `${Math.round(callback.percent*100)}`, `Downloading instance.zip from the Resource Manager...`);
                         }));
                     setTimeout(function finishCallback() {
@@ -164,24 +165,20 @@ async function buttonListeners() {
                 // And finally, apply patch update to the version medium.
                 await fs.writeFileSync(`${process.env.APPDATA}//devpanda//client//profile//modvar.json`, latest);
 
-                return true;
-
             } else {
-                // Continue on because this means the launcher is up to date.
-                return true;
+                // Continue on.
             }
         }
 
-        if (await getSetUpdate() === true) {
+        await getSetUpdate();
         setTimeout(function startGame() {
-            updateLoadBar(true, '100', 'Executing Order 66...');
+            updateLoadBar(true, '100', 'Running Java arguments...');
             setTimeout(async function startGame() {
                 updateLoadBar(false, '0', '.');
                 let args = await runtime.createArguments();
                 runtime.runApplication(args);
             }, 1750)
         }, 5500)
-    }
 
     });
 
