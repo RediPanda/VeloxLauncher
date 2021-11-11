@@ -1,8 +1,0 @@
-{
- "fileDistribution":"1.0.1",
- "serverBearer":"mc.hypixel.net",
- "reqLib-Client":"https://launcher.mojang.com/v1/objects/30bfe37a8db404db11c7edf02cb5165817afb4d9/client.jar",
- "reqLib-ClientVersion":"1.13.2",
- "reqLib-FML":"",
- "reqLib-FMLVersion":""
-}

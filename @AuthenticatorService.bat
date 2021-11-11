@@ -1,2 +1,0 @@
-node authenticator.js
-exit
