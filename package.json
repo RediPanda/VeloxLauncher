@@ -38,7 +38,7 @@
     "extract-zip-promise": "^1.0.5",
     "fs-extra": "^9.0.1",
     "gamedig": "^2.0.20",
-    "moment": "^2.26.0",
+    "moment": "^2.29.2",
     "node-fetch": "^2.6.0",
     "questions": "0.0.6",
     "randomatic": "^3.1.1",
