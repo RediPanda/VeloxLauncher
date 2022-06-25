@@ -39,7 +39,7 @@
     "fs-extra": "^9.0.1",
     "gamedig": "^2.0.20",
     "moment": "^2.26.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "questions": "0.0.6",
     "randomatic": "^3.1.1",
     "v8-compile-cache": "^2.1.1"
